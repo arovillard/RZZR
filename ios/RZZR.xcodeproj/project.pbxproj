@@ -26,24 +26,24 @@
 
 /* Begin PBXFileReference section */
 		13B07F961A680F5B00A75B9A /* RNTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = rntemplate/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.mm; path = rntemplate/AppDelegate.mm; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = rntemplate/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info-Production.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Info-Production.plist"; path = "rntemplate/Info-Production.plist"; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = rntemplate/main.m; sourceTree = "<group>"; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = RZZR/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.mm; path = RZZR/AppDelegate.mm; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = RZZR/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info-Production.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Info-Production.plist"; path = "RZZR/Info-Production.plist"; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RZZR/main.m; sourceTree = "<group>"; };
 		1BF299DC80FF3AB298BE4203 /* libPods-RNTemplate-Production.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNTemplate-Production.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B447692FD8B343984C63E00 /* Pods-RNTemplate-Development.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTemplate-Development.debug.xcconfig"; path = "Target Support Files/Pods-RNTemplate-Development/Pods-RNTemplate-Development.debug.xcconfig"; sourceTree = "<group>"; };
 		4BDD9040383ADAB5652EDDA4 /* Pods-RNTemplate-Development.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTemplate-Development.release.xcconfig"; path = "Target Support Files/Pods-RNTemplate-Development/Pods-RNTemplate-Development.release.xcconfig"; sourceTree = "<group>"; };
 		51EF12BEC02FB6AD06CE78F0 /* libPods-RNTemplate-Staging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNTemplate-Staging.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A88312B2E5A46E7A95635CC /* libPods-RNTemplate-Development.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNTemplate-Development.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		720A9CCD25E5A9D40074D6D5 /* RNTemplateDevelopment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNTemplateDevelopment.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		720A9CCE25E5A9D40074D6D5 /* Info-Development.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-Development.plist"; path = "rntemplate/Info-Development.plist"; sourceTree = "<group>"; };
+		720A9CCE25E5A9D40074D6D5 /* Info-Development.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-Development.plist"; path = "RZZR/Info-Development.plist"; sourceTree = "<group>"; };
 		72C7E07F25E5AB5600C8F72C /* RNTemplateStaging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNTemplateStaging.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		72C7E08025E5AB5600C8F72C /* Info-Staging.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-Staging.plist"; path = "rntemplate/Info-Staging.plist"; sourceTree = "<group>"; };
+		72C7E08025E5AB5600C8F72C /* Info-Staging.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-Staging.plist"; path = "RZZR/Info-Staging.plist"; sourceTree = "<group>"; };
 		74FDA92D4EC2DEE453E4A6AB /* Pods-RNTemplate-Staging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTemplate-Staging.debug.xcconfig"; path = "Target Support Files/Pods-RNTemplate-Staging/Pods-RNTemplate-Staging.debug.xcconfig"; sourceTree = "<group>"; };
 		B46BAEED1669DC7B79137BE4 /* Pods-RNTemplate-Production.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTemplate-Production.release.xcconfig"; path = "Target Support Files/Pods-RNTemplate-Production/Pods-RNTemplate-Production.release.xcconfig"; sourceTree = "<group>"; };
 		D2598B7B33B156FD34EA75E5 /* Pods-RNTemplate-Staging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTemplate-Staging.release.xcconfig"; path = "Target Support Files/Pods-RNTemplate-Staging/Pods-RNTemplate-Staging.release.xcconfig"; sourceTree = "<group>"; };
-		DB0B50CF24ACD3FA00882428 /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = rntemplate/BootSplash.storyboard; sourceTree = "<group>"; };
+		DB0B50CF24ACD3FA00882428 /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = RZZR/BootSplash.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		FDE5E599507C5569EC84D55F /* Pods-RNTemplate-Production.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTemplate-Production.debug.xcconfig"; path = "Target Support Files/Pods-RNTemplate-Production/Pods-RNTemplate-Production.debug.xcconfig"; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		13B07FAE1A68108700A75B9A /* rntemplate */ = {
+		13B07FAE1A68108700A75B9A /* RZZR */ = {
 			isa = PBXGroup;
 			children = (
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -89,7 +89,7 @@
 				DB0B50CF24ACD3FA00882428 /* BootSplash.storyboard */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 			);
-			name = rntemplate;
+			name = RZZR;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -127,7 +127,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* rntemplate */,
+				13B07FAE1A68108700A75B9A /* RZZR */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
@@ -169,7 +169,7 @@
 			dependencies = (
 			);
 			name = Production;
-			productName = rntemplate;
+			productName = RZZR;
 			productReference = 13B07F961A680F5B00A75B9A /* RNTemplate.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -191,7 +191,7 @@
 			dependencies = (
 			);
 			name = Development;
-			productName = rntemplate;
+			productName = RZZR;
 			productReference = 720A9CCD25E5A9D40074D6D5 /* RNTemplateDevelopment.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -213,7 +213,7 @@
 			dependencies = (
 			);
 			name = Staging;
-			productName = rntemplate;
+			productName = RZZR;
 			productReference = 72C7E07F25E5AB5600C8F72C /* RNTemplateStaging.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -231,7 +231,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "rntemplate" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "RZZR" */;
 			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -589,7 +589,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = "rntemplate/Info-Production.plist";
+				INFOPLIST_FILE = "RZZR/Info-Production.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -605,7 +605,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rntemplate;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RZZR;
 				PRODUCT_NAME = RNTemplate;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -620,7 +620,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = "rntemplate/Info-Production.plist";
+				INFOPLIST_FILE = "RZZR/Info-Production.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -636,7 +636,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rntemplate;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RZZR;
 				PRODUCT_NAME = RNTemplate;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -650,7 +650,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = "rntemplate/Info-Development.plist";
+				INFOPLIST_FILE = "RZZR/Info-Development.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -666,7 +666,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rntemplate.development;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RZZR.development;
 				PRODUCT_NAME = RNTemplateDevelopment;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -681,7 +681,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = "rntemplate/Info-Development.plist";
+				INFOPLIST_FILE = "RZZR/Info-Development.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -697,7 +697,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rntemplate.development;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RZZR.development;
 				PRODUCT_NAME = RNTemplateDevelopment;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -711,7 +711,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = "rntemplate/Info-Staging.plist";
+				INFOPLIST_FILE = "RZZR/Info-Staging.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -727,7 +727,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rntemplate.staging;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RZZR.staging;
 				PRODUCT_NAME = RNTemplateStaging;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -742,7 +742,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				INFOPLIST_FILE = "rntemplate/Info-Staging.plist";
+				INFOPLIST_FILE = "RZZR/Info-Staging.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -758,7 +758,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.rntemplate.staging;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RZZR.staging;
 				PRODUCT_NAME = RNTemplateStaging;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -914,7 +914,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "rntemplate" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "RZZR" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
