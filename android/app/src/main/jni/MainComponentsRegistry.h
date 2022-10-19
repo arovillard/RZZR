@@ -13,7 +13,7 @@ namespace facebook {
     public:
     // Adapt it to the package you used for your Java class.
     constexpr static auto kJavaDescriptor =
-        "Lcom/rntemplate/newarchitecture/components/MainComponentsRegistry;";
+        "Lcom/rzzr/newarchitecture/components/MainComponentsRegistry;";
 
     static void registerNatives();
 

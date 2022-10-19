@@ -1,4 +1,4 @@
-package com.rntemplate;
+package com.rzzr;
 
 import android.os.Bundle;
 

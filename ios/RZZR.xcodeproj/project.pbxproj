@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A8A3DBCEE4E09A23A9C0FEE /* libPods-RNTemplate-Staging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51EF12BEC02FB6AD06CE78F0 /* libPods-RNTemplate-Staging.a */; };
+		0A8A3DBCEE4E09A23A9C0FEE /* libPods-RZZR-Staging.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51EF12BEC02FB6AD06CE78F0 /* libPods-RZZR-Staging.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		36E72209B083AA8FC78A345A /* libPods-RNTemplate-Development.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A88312B2E5A46E7A95635CC /* libPods-RNTemplate-Development.a */; };
-		666B78041AFB4C6259851A72 /* libPods-RNTemplate-Production.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF299DC80FF3AB298BE4203 /* libPods-RNTemplate-Production.a */; };
+		36E72209B083AA8FC78A345A /* libPods-RZZR-Development.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A88312B2E5A46E7A95635CC /* libPods-RZZR-Development.a */; };
+		666B78041AFB4C6259851A72 /* libPods-RZZR-Production.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF299DC80FF3AB298BE4203 /* libPods-RZZR-Production.a */; };
 		720A9CC025E5A9D40074D6D5 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		720A9CC125E5A9D40074D6D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		720A9CC525E5A9D40074D6D5 /* BootSplash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB0B50CF24ACD3FA00882428 /* BootSplash.storyboard */; };
@@ -25,28 +25,28 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		13B07F961A680F5B00A75B9A /* RNTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07F961A680F5B00A75B9A /* RZZR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RZZR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = RZZR/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.mm; path = RZZR/AppDelegate.mm; sourceTree = "<group>"; };
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = RZZR/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info-Production.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Info-Production.plist"; path = "RZZR/Info-Production.plist"; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RZZR/main.m; sourceTree = "<group>"; };
-		1BF299DC80FF3AB298BE4203 /* libPods-RNTemplate-Production.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNTemplate-Production.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4B447692FD8B343984C63E00 /* Pods-RNTemplate-Development.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTemplate-Development.debug.xcconfig"; path = "Target Support Files/Pods-RNTemplate-Development/Pods-RNTemplate-Development.debug.xcconfig"; sourceTree = "<group>"; };
-		4BDD9040383ADAB5652EDDA4 /* Pods-RNTemplate-Development.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTemplate-Development.release.xcconfig"; path = "Target Support Files/Pods-RNTemplate-Development/Pods-RNTemplate-Development.release.xcconfig"; sourceTree = "<group>"; };
-		51EF12BEC02FB6AD06CE78F0 /* libPods-RNTemplate-Staging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNTemplate-Staging.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A88312B2E5A46E7A95635CC /* libPods-RNTemplate-Development.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNTemplate-Development.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		720A9CCD25E5A9D40074D6D5 /* RNTemplateDevelopment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNTemplateDevelopment.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BF299DC80FF3AB298BE4203 /* libPods-RZZR-Production.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RZZR-Production.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B447692FD8B343984C63E00 /* Pods-RZZR-Development.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RZZR-Development.debug.xcconfig"; path = "Target Support Files/Pods-RZZR-Development/Pods-RZZR-Development.debug.xcconfig"; sourceTree = "<group>"; };
+		4BDD9040383ADAB5652EDDA4 /* Pods-RZZR-Development.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RZZR-Development.release.xcconfig"; path = "Target Support Files/Pods-RZZR-Development/Pods-RZZR-Development.release.xcconfig"; sourceTree = "<group>"; };
+		51EF12BEC02FB6AD06CE78F0 /* libPods-RZZR-Staging.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RZZR-Staging.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A88312B2E5A46E7A95635CC /* libPods-RZZR-Development.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RZZR-Development.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		720A9CCD25E5A9D40074D6D5 /* RZZRDevelopment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RZZRDevelopment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		720A9CCE25E5A9D40074D6D5 /* Info-Development.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-Development.plist"; path = "RZZR/Info-Development.plist"; sourceTree = "<group>"; };
-		72C7E07F25E5AB5600C8F72C /* RNTemplateStaging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNTemplateStaging.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		72C7E07F25E5AB5600C8F72C /* RZZRStaging.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RZZRStaging.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72C7E08025E5AB5600C8F72C /* Info-Staging.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-Staging.plist"; path = "RZZR/Info-Staging.plist"; sourceTree = "<group>"; };
-		74FDA92D4EC2DEE453E4A6AB /* Pods-RNTemplate-Staging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTemplate-Staging.debug.xcconfig"; path = "Target Support Files/Pods-RNTemplate-Staging/Pods-RNTemplate-Staging.debug.xcconfig"; sourceTree = "<group>"; };
-		B46BAEED1669DC7B79137BE4 /* Pods-RNTemplate-Production.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTemplate-Production.release.xcconfig"; path = "Target Support Files/Pods-RNTemplate-Production/Pods-RNTemplate-Production.release.xcconfig"; sourceTree = "<group>"; };
-		D2598B7B33B156FD34EA75E5 /* Pods-RNTemplate-Staging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTemplate-Staging.release.xcconfig"; path = "Target Support Files/Pods-RNTemplate-Staging/Pods-RNTemplate-Staging.release.xcconfig"; sourceTree = "<group>"; };
+		74FDA92D4EC2DEE453E4A6AB /* Pods-RZZR-Staging.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RZZR-Staging.debug.xcconfig"; path = "Target Support Files/Pods-RZZR-Staging/Pods-RZZR-Staging.debug.xcconfig"; sourceTree = "<group>"; };
+		B46BAEED1669DC7B79137BE4 /* Pods-RZZR-Production.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RZZR-Production.release.xcconfig"; path = "Target Support Files/Pods-RZZR-Production/Pods-RZZR-Production.release.xcconfig"; sourceTree = "<group>"; };
+		D2598B7B33B156FD34EA75E5 /* Pods-RZZR-Staging.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RZZR-Staging.release.xcconfig"; path = "Target Support Files/Pods-RZZR-Staging/Pods-RZZR-Staging.release.xcconfig"; sourceTree = "<group>"; };
 		DB0B50CF24ACD3FA00882428 /* BootSplash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = BootSplash.storyboard; path = RZZR/BootSplash.storyboard; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		FDE5E599507C5569EC84D55F /* Pods-RNTemplate-Production.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNTemplate-Production.debug.xcconfig"; path = "Target Support Files/Pods-RNTemplate-Production/Pods-RNTemplate-Production.debug.xcconfig"; sourceTree = "<group>"; };
+		FDE5E599507C5569EC84D55F /* Pods-RZZR-Production.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RZZR-Production.debug.xcconfig"; path = "Target Support Files/Pods-RZZR-Production/Pods-RZZR-Production.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				666B78041AFB4C6259851A72 /* libPods-RNTemplate-Production.a in Frameworks */,
+				666B78041AFB4C6259851A72 /* libPods-RZZR-Production.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				36E72209B083AA8FC78A345A /* libPods-RNTemplate-Development.a in Frameworks */,
+				36E72209B083AA8FC78A345A /* libPods-RZZR-Development.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A8A3DBCEE4E09A23A9C0FEE /* libPods-RNTemplate-Staging.a in Frameworks */,
+				0A8A3DBCEE4E09A23A9C0FEE /* libPods-RZZR-Staging.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,9 +97,9 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				5A88312B2E5A46E7A95635CC /* libPods-RNTemplate-Development.a */,
-				1BF299DC80FF3AB298BE4203 /* libPods-RNTemplate-Production.a */,
-				51EF12BEC02FB6AD06CE78F0 /* libPods-RNTemplate-Staging.a */,
+				5A88312B2E5A46E7A95635CC /* libPods-RZZR-Development.a */,
+				1BF299DC80FF3AB298BE4203 /* libPods-RZZR-Production.a */,
+				51EF12BEC02FB6AD06CE78F0 /* libPods-RZZR-Staging.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -107,12 +107,12 @@
 		7F96445D4E518E57EA59E7D3 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4B447692FD8B343984C63E00 /* Pods-RNTemplate-Development.debug.xcconfig */,
-				4BDD9040383ADAB5652EDDA4 /* Pods-RNTemplate-Development.release.xcconfig */,
-				FDE5E599507C5569EC84D55F /* Pods-RNTemplate-Production.debug.xcconfig */,
-				B46BAEED1669DC7B79137BE4 /* Pods-RNTemplate-Production.release.xcconfig */,
-				74FDA92D4EC2DEE453E4A6AB /* Pods-RNTemplate-Staging.debug.xcconfig */,
-				D2598B7B33B156FD34EA75E5 /* Pods-RNTemplate-Staging.release.xcconfig */,
+				4B447692FD8B343984C63E00 /* Pods-RZZR-Development.debug.xcconfig */,
+				4BDD9040383ADAB5652EDDA4 /* Pods-RZZR-Development.release.xcconfig */,
+				FDE5E599507C5569EC84D55F /* Pods-RZZR-Production.debug.xcconfig */,
+				B46BAEED1669DC7B79137BE4 /* Pods-RZZR-Production.release.xcconfig */,
+				74FDA92D4EC2DEE453E4A6AB /* Pods-RZZR-Staging.debug.xcconfig */,
+				D2598B7B33B156FD34EA75E5 /* Pods-RZZR-Staging.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -141,9 +141,9 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* RNTemplate.app */,
-				720A9CCD25E5A9D40074D6D5 /* RNTemplateDevelopment.app */,
-				72C7E07F25E5AB5600C8F72C /* RNTemplateStaging.app */,
+				13B07F961A680F5B00A75B9A /* RZZR.app */,
+				720A9CCD25E5A9D40074D6D5 /* RZZRDevelopment.app */,
+				72C7E07F25E5AB5600C8F72C /* RZZRStaging.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -170,7 +170,7 @@
 			);
 			name = Production;
 			productName = RZZR;
-			productReference = 13B07F961A680F5B00A75B9A /* RNTemplate.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* RZZR.app */;
 			productType = "com.apple.product-type.application";
 		};
 		720A9CBC25E5A9D40074D6D5 /* Development */ = {
@@ -192,7 +192,7 @@
 			);
 			name = Development;
 			productName = RZZR;
-			productReference = 720A9CCD25E5A9D40074D6D5 /* RNTemplateDevelopment.app */;
+			productReference = 720A9CCD25E5A9D40074D6D5 /* RZZRDevelopment.app */;
 			productType = "com.apple.product-type.application";
 		};
 		72C7E06E25E5AB5600C8F72C /* Staging */ = {
@@ -214,7 +214,7 @@
 			);
 			name = Staging;
 			productName = RZZR;
-			productReference = 72C7E07F25E5AB5600C8F72C /* RNTemplateStaging.app */;
+			productReference = 72C7E07F25E5AB5600C8F72C /* RZZRStaging.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -302,15 +302,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RNTemplate-Development/Pods-RNTemplate-Development-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-RZZR-Development/Pods-RZZR-Development-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RNTemplate-Development/Pods-RNTemplate-Development-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-RZZR-Development/Pods-RZZR-Development-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RNTemplate-Development/Pods-RNTemplate-Development-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RZZR-Development/Pods-RZZR-Development-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		18ED3A9F496D1810625ADAFD /* [CP] Check Pods Manifest.lock */ = {
@@ -328,7 +328,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RNTemplate-Production-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-RZZR-Production-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -341,15 +341,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RNTemplate-Staging/Pods-RNTemplate-Staging-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-RZZR-Staging/Pods-RZZR-Staging-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RNTemplate-Staging/Pods-RNTemplate-Staging-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-RZZR-Staging/Pods-RZZR-Staging-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RNTemplate-Staging/Pods-RNTemplate-Staging-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RZZR-Staging/Pods-RZZR-Staging-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		720A9CBD25E5A9D40074D6D5 /* [CP] Check Pods Manifest.lock */ = {
@@ -367,7 +367,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RNTemplate-Development-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-RZZR-Development-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -413,15 +413,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RNTemplate-Development/Pods-RNTemplate-Development-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-RZZR-Development/Pods-RZZR-Development-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RNTemplate-Development/Pods-RNTemplate-Development-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-RZZR-Development/Pods-RZZR-Development-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RNTemplate-Development/Pods-RNTemplate-Development-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RZZR-Development/Pods-RZZR-Development-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		72C7E06F25E5AB5600C8F72C /* [CP] Check Pods Manifest.lock */ = {
@@ -439,7 +439,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RNTemplate-Staging-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-RZZR-Staging-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -485,15 +485,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RNTemplate-Staging/Pods-RNTemplate-Staging-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-RZZR-Staging/Pods-RZZR-Staging-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RNTemplate-Staging/Pods-RNTemplate-Staging-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-RZZR-Staging/Pods-RZZR-Staging-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RNTemplate-Staging/Pods-RNTemplate-Staging-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RZZR-Staging/Pods-RZZR-Staging-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		79ECE895C97C6678DE1666D9 /* [CP] Copy Pods Resources */ = {
@@ -502,15 +502,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RNTemplate-Production/Pods-RNTemplate-Production-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-RZZR-Production/Pods-RZZR-Production-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RNTemplate-Production/Pods-RNTemplate-Production-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-RZZR-Production/Pods-RZZR-Production-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RNTemplate-Production/Pods-RNTemplate-Production-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RZZR-Production/Pods-RZZR-Production-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		96728568D3BF4208B17DFF68 /* [CP] Embed Pods Frameworks */ = {
@@ -519,15 +519,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RNTemplate-Production/Pods-RNTemplate-Production-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-RZZR-Production/Pods-RZZR-Production-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RNTemplate-Production/Pods-RNTemplate-Production-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-RZZR-Production/Pods-RZZR-Production-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RNTemplate-Production/Pods-RNTemplate-Production-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RZZR-Production/Pods-RZZR-Production-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -584,7 +584,7 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FDE5E599507C5569EC84D55F /* Pods-RNTemplate-Production.debug.xcconfig */;
+			baseConfigurationReference = FDE5E599507C5569EC84D55F /* Pods-RZZR-Production.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -606,7 +606,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.RZZR;
-				PRODUCT_NAME = RNTemplate;
+				PRODUCT_NAME = RZZR;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -615,7 +615,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B46BAEED1669DC7B79137BE4 /* Pods-RNTemplate-Production.release.xcconfig */;
+			baseConfigurationReference = B46BAEED1669DC7B79137BE4 /* Pods-RZZR-Production.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -637,7 +637,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.RZZR;
-				PRODUCT_NAME = RNTemplate;
+				PRODUCT_NAME = RZZR;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -645,7 +645,7 @@
 		};
 		720A9CCB25E5A9D40074D6D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4B447692FD8B343984C63E00 /* Pods-RNTemplate-Development.debug.xcconfig */;
+			baseConfigurationReference = 4B447692FD8B343984C63E00 /* Pods-RZZR-Development.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -667,7 +667,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.RZZR.development;
-				PRODUCT_NAME = RNTemplateDevelopment;
+				PRODUCT_NAME = RZZRDevelopment;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -676,7 +676,7 @@
 		};
 		720A9CCC25E5A9D40074D6D5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4BDD9040383ADAB5652EDDA4 /* Pods-RNTemplate-Development.release.xcconfig */;
+			baseConfigurationReference = 4BDD9040383ADAB5652EDDA4 /* Pods-RZZR-Development.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -698,7 +698,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.RZZR.development;
-				PRODUCT_NAME = RNTemplateDevelopment;
+				PRODUCT_NAME = RZZRDevelopment;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -706,7 +706,7 @@
 		};
 		72C7E07D25E5AB5600C8F72C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 74FDA92D4EC2DEE453E4A6AB /* Pods-RNTemplate-Staging.debug.xcconfig */;
+			baseConfigurationReference = 74FDA92D4EC2DEE453E4A6AB /* Pods-RZZR-Staging.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -728,7 +728,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.RZZR.staging;
-				PRODUCT_NAME = RNTemplateStaging;
+				PRODUCT_NAME = RZZRStaging;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -737,7 +737,7 @@
 		};
 		72C7E07E25E5AB5600C8F72C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D2598B7B33B156FD34EA75E5 /* Pods-RNTemplate-Staging.release.xcconfig */;
+			baseConfigurationReference = D2598B7B33B156FD34EA75E5 /* Pods-RZZR-Staging.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -759,7 +759,7 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.RZZR.staging;
-				PRODUCT_NAME = RNTemplateStaging;
+				PRODUCT_NAME = RZZRStaging;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};

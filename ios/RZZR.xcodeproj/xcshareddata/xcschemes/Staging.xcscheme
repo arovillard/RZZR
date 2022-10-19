@@ -15,9 +15,9 @@
                   <BuildableReference
                      BuildableIdentifier = "primary"
                      BlueprintIdentifier = "72C7E06E25E5AB5600C8F72C"
-                     BuildableName = "RNTemplateStaging.app"
+                     BuildableName = "RZZRStaging.app"
                      BlueprintName = "Staging"
-                     ReferencedContainer = "container:rntemplate.xcodeproj">
+                     ReferencedContainer = "container:rzzr.xcodeproj">
                   </BuildableReference>
                </EnvironmentBuildable>
             </ActionContent>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "72C7E06E25E5AB5600C8F72C"
-               BuildableName = "RNTemplateStaging.app"
+               BuildableName = "RZZRStaging.app"
                BlueprintName = "Staging"
-               ReferencedContainer = "container:rntemplate.xcodeproj">
+               ReferencedContainer = "container:rzzr.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -63,9 +63,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "72C7E06E25E5AB5600C8F72C"
-            BuildableName = "RNTemplateStaging.app"
+            BuildableName = "RZZRStaging.app"
             BlueprintName = "Staging"
-            ReferencedContainer = "container:rntemplate.xcodeproj">
+            ReferencedContainer = "container:rzzr.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "72C7E06E25E5AB5600C8F72C"
-            BuildableName = "RNTemplateStaging.app"
+            BuildableName = "RZZRStaging.app"
             BlueprintName = "Staging"
-            ReferencedContainer = "container:rntemplate.xcodeproj">
+            ReferencedContainer = "container:rzzr.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
@@ -91,7 +91,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
-      customArchiveName = "RNTemplate Staging"
+      customArchiveName = "RZZR Staging"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>
