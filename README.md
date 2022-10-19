@@ -26,41 +26,10 @@ This project aims to be a strong foundation for react-native applications. It pr
 - [redux-thunk](https://github.com/gaearon/redux-thunk) to dispatch asynchronous actions.
 - [jest](https://facebook.github.io/jest/) and [react-native-testing-library](https://callstack.github.io/react-native-testing-library/) for testing.
 
-## Usage
-
-#### Use Template button
-
-Click the "Use this template" button above the file list, then use the Owner drop-down menu, and select the account you want to own the repository. Creating a repository from a template has the following advantages:
-
-- A repository created from a template starts with a single commit.
-- Commits to a repository created from a template do appear in your contribution graph.
-- Creating a repository from a template starts a new project quickly.
-
-### Option 1: Using React-Native-Rename
-
-You can start by cloning this repository and using [react-native-rename](https://github.com/junedomingo/react-native-rename). In the current state of this project, it should give you no issues at all, just run the script, delete your node modules and reinstall them and you should be good to go.
-
-Keep in mind that this library can cause trouble if you are renaming a project that uses `Pods` on the iOS side.
-
-After that you should proceed as with any javascript project:
-
-- Go to your project's root folder and run `npm install`.
-- If you are using Xcode 12.5 or higher got to /ios and execute `pod install --`repo-update`
-- Run `npm run ios` or `npm run android` to start your application!
-
-(Using yarn: `yarn ios` or `yarn android`)
-
-Note: Please read the Setup environments section that is below in this file for more information about the execution scripts.
-
-### Option 2: Copy the structure to your project
-
-If you want to roll on your own and don't want to use this as a template, you can create your project and then copy the `/src` folder (which has all the code of your application) and update your `index.js`.
-
-Keep in mind that if you do this, you'll have to **install and link** all dependencies (as well as adding all the necessary native code for each library that requires it).
 
 ## Folder structure
 
-This template follows a very simple project structure:
+This project follows a very simple project structure:
 
 - `src`: This folder is the main container of all the code inside your application.
   - `actions`: This folder contains all actions that can be dispatched to redux.
