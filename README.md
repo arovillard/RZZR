@@ -53,10 +53,6 @@ This project follows a very simple project structure:
   - `App.js`: Main component that starts your whole app.
   - `index.js`: Entry point of your application as per React-Native standards.
 
-## Splash screen customization
-
-To customize the splash screen (logo and background color) use the CLI provided in the [official docs](https://github.com/zoontek/react-native-bootsplash#assets-generation).
-
 ## Setup environments
 
 ### Using scripts from console
