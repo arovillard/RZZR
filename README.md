@@ -54,13 +54,13 @@ This project follows a very simple project structure:
   - `index.js`: Entry point of your application as per React-Native standards.
 
 ## Running locally
-1 - npm install
-2 - cd ios
-3 - sudo gem install cocoapods
-4 - bundle install
-5 - pod install --repo-update
-6 - cd back into root
-7 - npm run ios / npm run android
+- 1 - npm install
+- 2 - cd ios
+- 3 - sudo gem install cocoapods
+- 4 - bundle install
+- 5 - pod install --repo-update
+- 6 - cd back into root
+- 7 - npm run ios / npm run android
 
 
 ## Setup environments
