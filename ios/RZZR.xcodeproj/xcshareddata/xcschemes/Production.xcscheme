@@ -15,7 +15,7 @@
                   <BuildableReference
                      BuildableIdentifier = "primary"
                      BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-                     BuildableName = "RZZR.app"
+                     BuildableName = "rzzr.app"
                      BlueprintName = "Production"
                      ReferencedContainer = "container:rzzr.xcodeproj">
                   </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "RZZR.app"
+               BuildableName = "rzzr.app"
                BlueprintName = "Production"
                ReferencedContainer = "container:rzzr.xcodeproj">
             </BuildableReference>
@@ -63,7 +63,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "RZZR.app"
+            BuildableName = "rzzr.app"
             BlueprintName = "Production"
             ReferencedContainer = "container:rzzr.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "RZZR.app"
+            BuildableName = "rzzr.app"
             BlueprintName = "Production"
             ReferencedContainer = "container:rzzr.xcodeproj">
          </BuildableReference>
@@ -91,7 +91,7 @@
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
-      customArchiveName = "RZZR Dev"
+      customArchiveName = "rzzr Dev"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>
