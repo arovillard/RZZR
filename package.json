@@ -11,7 +11,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "android": "react-native run-android --variant=developmentDebug",
+    "android": "react-native run-android --port=8088 --variant=developmentDebug",
     "android:prod": "react-native run-android --variant=productionDebug",
     "android:staging": "react-native run-android --variant=stagingDebug",
     "ios": "react-native run-ios --port=8088 --scheme 'Development'",
