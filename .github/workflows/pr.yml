@@ -18,13 +18,13 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16.14.0
-          cache: "yarn"
+          cache: "npm"
 
       - name: Install Node modules
-        run: yarn ci   
+        run: npm ci   
 
       - name: Unit & Integration tests
-        run: yarn test:ci
+        run: npm test:ci
 
   # #Second job
   # build-android:
