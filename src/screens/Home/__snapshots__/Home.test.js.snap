@@ -84,7 +84,7 @@ exports[`Home should match the snapshot 1`] = `
         ]
       }
     >
-      View customer profile ci test
+      View customer profile
     </Text>
   </View>
 </View>
