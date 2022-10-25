@@ -25,7 +25,7 @@ export function Home() {
       <Button
         onPress={() => navigation.navigate('CustomerNavigator', { screen: 'Customer' })}
         style={styles.submitButton}
-        title="View customer profile"
+        title="View customer profile ci test"
       />
     </View>
   );
