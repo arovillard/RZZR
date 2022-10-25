@@ -24,7 +24,7 @@ jobs:
         run: npm ci   
 
       - name: Unit & Integration tests
-        run: npm test:ci
+        run: npm run test:ci
 
   # #Second job
   # build-android:
