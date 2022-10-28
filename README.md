@@ -1,9 +1,3 @@
-# React Native Template
-
-[![Moove It](https://circleci.com/gh/moove-it/react-native-template.svg?style=svg)](https://app.circleci.com/pipelines/github/moove-it/react-native-template?branch=master)
-
-This project aims to be a strong foundation for react-native applications. It provides a clear and organized structure, core dependencies, and boilerplate to jumpstart development.
-
 ## Prerequisites
 
 - [Node.js > 12](https://nodejs.org) and npm (Recommended: Use [nvm](https://github.com/nvm-sh/nvm))
@@ -73,13 +67,11 @@ The template already has scripts to execute the project calling a specific envir
 To define which env you want to use, just keep the structure `yarn [platform]: [environment]`
 
 
-DEV: `yarn ios` or `yarn android`
+DEV: `npm run ios` or `npm run android`
 
-STG: `yarn ios:staging` or `yarn android:staging`
+STG: `npm run ios:staging` or `npm run android:staging`
 
-PROD: `yarn ios:prod` o `yarn android:prod`
-
-Also, you can use npm following the same rule as before: `npm run ios:staging`
+PROD: `npm run ios:prod` o `npm run android:prod`
 
 Modify the environment variables files in root folder (`.env.development`, `.env.production` and `.env.staging`)
 
@@ -142,11 +134,7 @@ For coding styling, we decided to go with ESLint and [React Native community's s
 
 # How to use it
 
-The idea of this section is to explain how the template composition is the best and easiest to use when you try to use well-formed, architectures, especially using redux flow.
-
 The template follows a simple and convenient exporting pattern. The folder index exposes the resources, allowing to import all from the same path.
-
-With that in mind, we are going to look at each folder to explain how to use it.
 
 ## Components
 

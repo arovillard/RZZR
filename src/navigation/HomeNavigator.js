@@ -8,8 +8,12 @@ const Stack = createNativeStackNavigator();
 
 export function HomeNavigator() {
   return (
-    <Stack.Navigator>
-      <Stack.Screen name={NAVIGATION.home} component={Home} />
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen
+        name={NAVIGATION.home}
+        component={Home}
+        screenOptions={{ headerLargeTitle: false }}
+      />
       <Stack.Screen name={NAVIGATION.customerNavigator} component={CustomerNavigator} />
     </Stack.Navigator>
   );

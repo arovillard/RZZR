@@ -4,3 +4,4 @@ export { Profile } from '@/screens/Profile/Profile';
 export { Customer } from '@/screens/Customer/Customer';
 export { NewTicket } from '@/screens/NewTicket/NewTicket';
 export { ViewTicket } from '@/screens/ViewTicket/ViewTicket';
+export { ConfirmTicket } from '@/screens/ConfirmTicket/ConfirmTicket';

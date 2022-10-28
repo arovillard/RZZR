@@ -5,5 +5,6 @@ export const NAVIGATION = {
   customer: 'Customer',
   newTicket: 'NewTicket',
   viewTicket: 'ViewTicket',
+  confirmTicket: 'ConfirmTicket',
   customerNavigator: 'CustomerNavigator',
 };
