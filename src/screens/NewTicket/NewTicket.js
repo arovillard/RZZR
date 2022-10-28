@@ -26,9 +26,11 @@ export function NewTicket() {
         console.log('User tapped custom button on camera launch: ', res.customButton);
       } else {
         alert(JSON.stringify(res));
-        ImgToBase64.getBase64String(res.assets[0].uri)
-          .then((base64String) => console.log('base64String', base64String))
-          .catch((err) => console.log('err base64', err));
+        if (!res.errorCode) {
+          ImgToBase64.getBase64String(res?.assets[0].uri)
+            .then((base64String) => console.log('base64String', base64String))
+            .catch((err) => console.log('err base64', err));
+        }
         setState({
           filePath: res,
         });
@@ -48,9 +50,11 @@ export function NewTicket() {
         console.log('User tapped custom button on image/gallery launch: ', res.customButton);
       } else {
         alert(JSON.stringify(res));
-        ImgToBase64.getBase64String(res.assets[0].uri)
-          .then((base64String) => console.log('base64String', base64String))
-          .catch((err) => console.log('err base64', err));
+        if (!res.errorCode) {
+          ImgToBase64.getBase64String(res.assets[0].uri)
+            .then((base64String) => console.log('base64String', base64String))
+            .catch((err) => console.log('err base64', err));
+        }
         setState({
           filePath: res,
         });
