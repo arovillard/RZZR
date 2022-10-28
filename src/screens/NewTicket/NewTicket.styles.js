@@ -9,17 +9,6 @@ export const styles = StyleSheet.create({
     paddingHorizontal: spacing.xl,
   },
   submitButton: {
-    width: 250,
-    height: 60,
-    backgroundColor: '#3740ff',
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: 4,
-    marginBottom: 12,
-  },
-  buttonText: {
-    textAlign: 'center',
-    fontSize: 15,
-    color: '#fff',
+    marginTop: spacing.m,
   },
 });

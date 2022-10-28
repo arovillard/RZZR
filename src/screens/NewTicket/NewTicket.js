@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Text, View, TouchableOpacity } from 'react-native';
-import ImgToBase64 from 'react-native-image-base64';
+import { base64Image } from '../../utils/base64Image';
 import { styles } from '@/screens/NewTicket/NewTicket.styles';
 
 export function NewTicket() {
@@ -27,9 +27,7 @@ export function NewTicket() {
       } else {
         alert(JSON.stringify(res));
         if (!res.errorCode) {
-          ImgToBase64.getBase64String(res?.assets[0].uri)
-            .then((base64String) => console.log('base64String', base64String))
-            .catch((err) => console.log('err base64', err));
+          base64Image(res?.assets[0].uri);
         }
         setState({
           filePath: res,
@@ -51,9 +49,7 @@ export function NewTicket() {
       } else {
         alert(JSON.stringify(res));
         if (!res.errorCode) {
-          ImgToBase64.getBase64String(res.assets[0].uri)
-            .then((base64String) => console.log('base64String', base64String))
-            .catch((err) => console.log('err base64', err));
+          base64Image(res?.assets[0].uri);
         }
         setState({
           filePath: res,
@@ -72,14 +68,14 @@ export function NewTicket() {
           onPress={cameraLaunch}
           style={styles.submitButton}
         >
-          <Text style={styles.buttonText}>Launch Camera Directly</Text>
+          <Text>Launch Camera Directly</Text>
         </TouchableOpacity>
         <TouchableOpacity
           accessibilityRole="button"
           onPress={imageGalleryLaunch}
           style={styles.submitButton}
         >
-          <Text style={styles.buttonText}>Launch Image Gallery Directly</Text>
+          <Text>Launch Image Gallery Directly</Text>
         </TouchableOpacity>
       </View>
     </View>
