@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Text, View, TouchableOpacity } from 'react-native';
-import { base64Image } from '../../utils/base64Image';
+import { compressImageConvertToBase64 } from '../../utils/compressImageConvertToBase64';
 import { styles } from '@/screens/NewTicket/NewTicket.styles';
 
 export function NewTicket() {
@@ -12,6 +12,8 @@ export function NewTicket() {
       skipBackup: true,
       path: 'images',
     },
+    maxWidth: 1024,
+    maxHeight: 1024,
   };
 
   //Launch Camera
@@ -27,7 +29,7 @@ export function NewTicket() {
       } else {
         alert(JSON.stringify(res));
         if (!res.errorCode) {
-          base64Image(res?.assets[0].uri);
+          compressImageConvertToBase64(res?.assets[0].uri);
         }
         setState({
           filePath: res,
@@ -49,7 +51,7 @@ export function NewTicket() {
       } else {
         alert(JSON.stringify(res));
         if (!res.errorCode) {
-          base64Image(res?.assets[0].uri);
+          compressImageConvertToBase64(res?.assets[0].uri);
         }
         setState({
           filePath: res,

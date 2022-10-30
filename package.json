@@ -37,6 +37,7 @@
     "react": "18.1.0",
     "react-native": "0.70.3",
     "react-native-bootsplash": "^4.2.0",
+    "react-native-compressor": "^1.6.1",
     "react-native-config": "^1.4.5",
     "react-native-gesture-handler": "^2.2.0",
     "react-native-image-base64": "^0.1.4",
@@ -53,7 +54,6 @@
   "devDependencies": {
     "@babel/core": "^7.17.2",
     "@babel/runtime": "^7.17.2",
-    "react-native-codegen": "^0.0.18",
     "@react-native-community/eslint-config": "^3.0.1",
     "@testing-library/jest-native": "^4.0.4",
     "@testing-library/react-native": "^9.0.0",
@@ -70,6 +70,7 @@
     "eslint-plugin-testing-library": "^5.0.5",
     "jest": "^27.5.1",
     "metro-react-native-babel-preset": "^0.72.3",
+    "react-native-codegen": "^0.0.18",
     "react-test-renderer": "18.1.0",
     "redux-mock-store": "^1.5.4"
   }
