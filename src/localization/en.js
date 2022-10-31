@@ -21,4 +21,17 @@ export const en = {
     logout: 'Logout',
     message: 'This screen has the iOS native large header.',
   },
+  ticket: {
+    inputFieldHint: 'New ticket form field',
+    customerName: 'Customer Name',
+    warehouse: 'warehouse',
+    date: 'Date',
+    partNumber: 'Part Number',
+    lotNumber: 'Lot Number',
+    surgeon: 'Surgeon',
+    poNumber: 'PO Number',
+    buttonReview: 'Review Submission',
+    buttonSubmit: 'Submit Ticket',
+    apiError: 'There was an issue with the ticket submission',
+  },
 };

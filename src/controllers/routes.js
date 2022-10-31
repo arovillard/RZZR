@@ -3,4 +3,7 @@ export const routes = {
     login: '/users',
     logout: '/users/logout',
   },
+  ticket: {
+    submitTicket: '/submitTicket',
+  },
 };

@@ -1,0 +1,31 @@
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Text, View } from 'react-native';
+import { Button } from '@/components';
+import { strings } from '@/localization';
+import { createTicket, TYPES } from '@/actions/TicketActions';
+import { isLoadingSelector } from '@/selectors/StatusSelectors';
+import { styles } from '@/screens/ConfirmTicket/ConfirmTicket.styles';
+
+export function ConfirmTicket({ route, navigation }) {
+  const dispatch = useDispatch();
+  const isLoading = useSelector((state) => isLoadingSelector([TYPES.CREATE_TICKET], state));
+  const { ticket } = route.params;
+
+  const submitForm = () => {
+    dispatch(createTicket(ticket));
+    navigation.navigate('CustomerNavigator', { screen: 'Customer' });
+  };
+
+  return (
+    <View style={styles.container}>
+      <Text>Here we are going to review the ticket before submit</Text>
+      <Text>{JSON.stringify(ticket, null, 2)}</Text>
+      <Button
+        onPress={submitForm}
+        style={styles.submitButton}
+        title={isLoading ? strings.common.loading : strings.ticket.buttonSubmit}
+      />
+    </View>
+  );
+}
