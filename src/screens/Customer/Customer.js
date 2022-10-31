@@ -13,8 +13,8 @@ export function Customer() {
     <View style={styles.container}>
       <ScrollView>
         <Text>
-          I am the customer screen screen, here there will be a list of tickets and I'll be able to
-          create a new ticket
+          I am the customer screen, here there will be a list of tickets and I'll be able to create
+          a new ticket
         </Text>
         <Button
           onPress={() => navigation.navigate('CustomerNavigator', { screen: 'NewTicket' })}
