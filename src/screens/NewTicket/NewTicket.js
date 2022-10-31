@@ -11,7 +11,9 @@ import { shadow } from '@/theme';
 export function NewTicket() {
   const navigation = useNavigation();
   var ImagePicker = require('react-native-image-picker');
-  const [state, setState] = useState(null);
+  const [images, setImages] = useState([]);
+  const [singleImage, setSingleImage] = useState('');
+  let testing = '';
 
   const {
     control,
@@ -45,7 +47,6 @@ export function NewTicket() {
   //Launch Camera
   const cameraLaunch = () => {
     ImagePicker.launchCamera(options, (res) => {
-      console.log('Response camera launch: ', JSON.stringify(res));
       if (res.didCancel) {
         console.log('User cancelled camera launch');
       } else if (res.error) {
@@ -57,17 +58,17 @@ export function NewTicket() {
         if (!res.errorCode) {
           compressImageConvertToBase64(res?.assets[0].uri);
         }
-        setState({
+        setSingleImage({
           filePath: res,
         });
+        // setImages(images.concat(singleImage?.filePath));
       }
     });
   };
 
   //Launch Image Gallery
   const imageGalleryLaunch = () => {
-    ImagePicker.launchImageLibrary(options, (res) => {
-      console.log('Response image gallery: ', JSON.stringify(res));
+    ImagePicker.launchImageLibrary(options, async (res) => {
       if (res.didCancel) {
         console.log('User cancelled image gallery');
       } else if (res.error) {
@@ -77,14 +78,18 @@ export function NewTicket() {
       } else {
         alert(JSON.stringify(res));
         if (!res.errorCode) {
-          compressImageConvertToBase64(res?.assets[0].uri);
+          testing = compressImageConvertToBase64(res?.assets[0].uri);
+          console.log('testing ============================', testing);
         }
-        setState({
+        setSingleImage({
           filePath: res,
         });
+        setImages((images) => [...images, singleImage?.filePath]);
       }
     });
   };
+
+  console.log('I m images array', JSON.stringify(images));
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
@@ -188,7 +193,7 @@ export function NewTicket() {
           onPress={imageGalleryLaunch}
           style={styles.submitButton}
         >
-          <Text>Launch Image Gallery Directly</Text>
+          <Text>Launch Image Gallery</Text>
         </TouchableOpacity>
       </View>
     </ScrollView>
