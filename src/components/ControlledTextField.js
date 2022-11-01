@@ -1,7 +1,7 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import { Controller } from 'react-hook-form';
-import { TextField } from '@/components';
+import { TextField, ErrorView } from '@/components';
 
 export const ControlledTextField = ({
   control,
@@ -30,7 +30,7 @@ export const ControlledTextField = ({
           />
         )}
       />
-      {errors && <Text>This is required.</Text>}
+      {errors && <ErrorView errors={['This is required.']} />}
     </View>
   );
 };

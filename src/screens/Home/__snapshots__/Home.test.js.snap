@@ -3,12 +3,17 @@
 exports[`Home should match the snapshot 1`] = `
 <View
   style={
-    Object {
-      "alignItems": "center",
-      "flex": 1,
-      "justifyContent": "center",
-      "paddingHorizontal": 40,
-    }
+    Array [
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+        "paddingHorizontal": 40,
+      },
+      Object {
+        "backgroundColor": undefined,
+      },
+    ]
   }
 >
   <Text
@@ -46,6 +51,11 @@ exports[`Home should match the snapshot 1`] = `
     TEST
   </Text>
   <View
+    accessibilityState={
+      Object {
+        "disabled": false,
+      }
+    }
     accessible={true}
     collapsable={false}
     focusable={true}
@@ -59,13 +69,14 @@ exports[`Home should match the snapshot 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "borderColor": "rgb(216, 216, 216)",
-        "borderRadius": 5,
+        "backgroundColor": "rgb(0, 122, 255)",
+        "borderColor": "rgb(0, 122, 255)",
+        "borderRadius": 3,
         "borderWidth": 1,
+        "height": 40,
         "justifyContent": "center",
         "marginTop": 24,
         "opacity": 1,
-        "padding": 10,
         "width": "100%",
       }
     }
@@ -74,10 +85,10 @@ exports[`Home should match the snapshot 1`] = `
       style={
         Array [
           Object {
-            "color": "rgb(28, 28, 30)",
+            "color": undefined,
           },
           Object {
-            "fontSize": 16,
+            "fontSize": 18,
             "fontWeight": "700",
           },
           null,

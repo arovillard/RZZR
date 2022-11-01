@@ -3,11 +3,16 @@
 exports[`Profile should match the snapshot 1`] = `
 <View
   style={
-    Object {
-      "flex": 1,
-      "justifyContent": "space-between",
-      "padding": 40,
-    }
+    Array [
+      Object {
+        "flex": 1,
+        "justifyContent": "space-between",
+        "padding": 40,
+      },
+      Object {
+        "backgroundColor": undefined,
+      },
+    ]
   }
 >
   <Text
@@ -29,6 +34,11 @@ exports[`Profile should match the snapshot 1`] = `
     This screen has the iOS native large header.
   </Text>
   <View
+    accessibilityState={
+      Object {
+        "disabled": false,
+      }
+    }
     accessible={true}
     collapsable={false}
     focusable={true}
@@ -42,12 +52,13 @@ exports[`Profile should match the snapshot 1`] = `
     style={
       Object {
         "alignItems": "center",
-        "borderColor": "rgb(216, 216, 216)",
-        "borderRadius": 5,
+        "backgroundColor": "rgb(0, 122, 255)",
+        "borderColor": "rgb(0, 122, 255)",
+        "borderRadius": 3,
         "borderWidth": 1,
+        "height": 40,
         "justifyContent": "center",
         "opacity": 1,
-        "padding": 10,
         "width": "100%",
       }
     }
@@ -56,10 +67,10 @@ exports[`Profile should match the snapshot 1`] = `
       style={
         Array [
           Object {
-            "color": "rgb(28, 28, 30)",
+            "color": undefined,
           },
           Object {
-            "fontSize": 16,
+            "fontSize": 18,
             "fontWeight": "700",
           },
           null,

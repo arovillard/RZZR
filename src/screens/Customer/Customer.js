@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useTheme } from '@react-navigation/native';
 import { useSelector } from 'react-redux';
 import { Text, View, ScrollView } from 'react-native';
 import { styles } from '@/screens/Customer/Customer.styles';
@@ -9,8 +9,9 @@ import { getTickets } from '@/selectors/TicketSelectors';
 export function Customer() {
   const navigation = useNavigation();
   const tickets = useSelector(getTickets);
+  const { colors } = useTheme();
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { backgroundColor: colors.white }]}>
       <ScrollView>
         <Text>
           I am the customer screen screen, here there will be a list of tickets and I'll be able to

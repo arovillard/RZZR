@@ -15,7 +15,7 @@ export function Home() {
   const navigation = useNavigation();
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { backgroundColor: colors.white }]}>
       <Text style={[typography.title, { color: colors.text }]}>
         {strings.home.message} {user?.username}
       </Text>

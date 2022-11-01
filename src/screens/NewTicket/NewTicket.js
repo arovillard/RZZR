@@ -1,7 +1,7 @@
 import React from 'react';
 import { ScrollView, View } from 'react-native';
 import { useForm } from 'react-hook-form';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useTheme } from '@react-navigation/native';
 import { Button, ControlledTextField } from '@/components';
 import { strings } from '@/localization';
 import { styles } from '@/screens/Login/Login.styles';
@@ -9,6 +9,7 @@ import { shadow } from '@/theme';
 
 export function NewTicket() {
   const navigation = useNavigation();
+  const { colors } = useTheme();
 
   const {
     control,
@@ -30,7 +31,7 @@ export function NewTicket() {
     navigation.navigate('ConfirmTicket', { ticket: { ...data } });
   };
   return (
-    <ScrollView contentContainerStyle={styles.container}>
+    <ScrollView contentContainerStyle={[styles.container, { backgroundColor: colors.white }]}>
       <View style={[styles.formContainer, shadow.primary]}>
         <ControlledTextField
           name="customerName"
