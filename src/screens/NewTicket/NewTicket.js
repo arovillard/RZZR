@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ScrollView, View, Text, TouchableOpacity } from 'react-native';
+import { ScrollView, View, Text, TouchableOpacity, Image } from 'react-native';
 import { useForm } from 'react-hook-form';
 import { useNavigation } from '@react-navigation/native';
 import { compressImageConvertToBase64 } from '../../utils/compressImageConvertToBase64';
@@ -12,7 +12,6 @@ export function NewTicket() {
   const navigation = useNavigation();
   var ImagePicker = require('react-native-image-picker');
   const [images, setImages] = useState([]);
-  const [singleImage, setSingleImage] = useState('');
   let testing = '';
 
   const {
@@ -58,10 +57,7 @@ export function NewTicket() {
         if (!res.errorCode) {
           compressImageConvertToBase64(res?.assets[0].uri);
         }
-        setSingleImage({
-          filePath: res,
-        });
-        // setImages(images.concat(singleImage?.filePath));
+        setImages((images) => [...images, res]);
       }
     });
   };
@@ -81,10 +77,7 @@ export function NewTicket() {
           testing = compressImageConvertToBase64(res?.assets[0].uri);
           console.log('testing ============================', testing);
         }
-        setSingleImage({
-          filePath: res,
-        });
-        setImages((images) => [...images, singleImage?.filePath]);
+        setImages((images) => [...images, res]);
       }
     });
   };
@@ -195,6 +188,13 @@ export function NewTicket() {
         >
           <Text>Launch Image Gallery</Text>
         </TouchableOpacity>
+        {images &&
+          images.forEach((item, index) => {
+            <Text style={{ backgroundColor: 'blue' }}>hello I am here</Text>;
+            console.log('I m index', index);
+            console.log('I m item', item);
+            console.log('I m item filename', JSON.stringify(item.assets[index]?.fileName));
+          })}
       </View>
     </ScrollView>
   );

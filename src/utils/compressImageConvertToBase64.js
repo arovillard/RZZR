@@ -6,7 +6,7 @@ export function compressImageConvertToBase64(uri) {
     (compressedString) =>
       ImgToBase64.getBase64String(compressedString)
         .then((base64String) => {
-          console.log(base64String);
+          // console.log(base64String);
           return base64String;
         })
         .catch((err) => console.log('err base64', err))
