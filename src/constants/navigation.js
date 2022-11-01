@@ -1,7 +1,7 @@
 export const NAVIGATION = {
-  home: 'Home',
+  home: 'Customers',
   login: 'Login',
-  profile: 'Profile',
+  profile: 'Account',
   customer: 'Customer',
   newTicket: 'NewTicket',
   viewTicket: 'ViewTicket',

@@ -17,7 +17,7 @@ export function Profile() {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { backgroundColor: colors.white }]}>
       <Text style={[typography.title, styles.title, { color: colors.text }]}>
         {strings.profile.message}
       </Text>

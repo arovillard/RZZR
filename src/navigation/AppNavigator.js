@@ -15,9 +15,15 @@ export function AppNavigator() {
     <Tab.Navigator
       screenOptions={({ route }) => ({
         headerShown: false,
-        tabBarActiveTintColor: colors.activeTab,
+        tabBarActiveTintColor: colors.white,
         tabBarInactiveTintColor: colors.inactiveTab,
         tabBarIcon: ({ color }) => <TabBarIcon color={color} routeName={route.name} />,
+        tabBarStyle: {
+          backgroundColor: colors.primary,
+          paddingTop: 10,
+          paddingBottom: 20,
+          height: 83,
+        },
       })}
     >
       <Tab.Screen name={NAVIGATION.home} component={HomeNavigator} />

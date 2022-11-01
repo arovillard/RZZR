@@ -9,8 +9,8 @@ export const en = {
     variant: 'App variant: ',
   },
   login: {
-    username: 'Username',
-    usernameHint: 'Enter your username',
+    username: 'Email',
+    usernameHint: 'Enter your email',
     button: 'Login',
     password: 'Password',
     passwordHint: 'Enter your password',
@@ -33,5 +33,8 @@ export const en = {
     buttonReview: 'Review Submission',
     buttonSubmit: 'Submit Ticket',
     apiError: 'There was an issue with the ticket submission',
+  },
+  customer: {
+    customers: 'Customers',
   },
 };

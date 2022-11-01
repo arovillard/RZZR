@@ -6,11 +6,9 @@ export const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingHorizontal: spacing.xl,
+    paddingHorizontal: spacing.s,
   },
   formContainer: {
-    borderRadius: 5,
-    padding: spacing.s,
     width: '100%',
   },
   submitButton: {

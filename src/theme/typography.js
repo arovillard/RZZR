@@ -10,7 +10,7 @@ export const typography = StyleSheet.create({
     fontWeight: '400',
   },
   label: {
-    fontSize: 16,
+    fontSize: 12,
     fontWeight: '700',
   },
   error: {

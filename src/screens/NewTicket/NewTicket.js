@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { ScrollView, View, Text, TouchableOpacity, Image } from 'react-native';
+import { ScrollView, View, Text, TouchableOpacity } from 'react-native';
 import { useForm } from 'react-hook-form';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useTheme } from '@react-navigation/native';
 import { compressImageConvertToBase64 } from '../../utils/compressImageConvertToBase64';
 import { Button, ControlledTextField } from '@/components';
 import { strings } from '@/localization';
@@ -13,6 +13,7 @@ export function NewTicket() {
   var ImagePicker = require('react-native-image-picker');
   const [images, setImages] = useState([]);
   let testing = '';
+  const { colors } = useTheme();
 
   const {
     control,
@@ -85,7 +86,7 @@ export function NewTicket() {
   console.log('I m images array', JSON.stringify(images));
 
   return (
-    <ScrollView contentContainerStyle={styles.container}>
+    <ScrollView contentContainerStyle={[styles.container, { backgroundColor: colors.white }]}>
       <View style={[styles.formContainer, shadow.primary]}>
         <ControlledTextField
           name="customerName"

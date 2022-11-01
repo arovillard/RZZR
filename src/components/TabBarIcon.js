@@ -14,7 +14,8 @@ export function TabBarIcon({ color, routeName }) {
     <Image
       accessibilityIgnoresInvertColors
       source={tabIcon[routeName]}
-      style={{ tintColor: color }}
+      // eslint-disable-next-line react-native/no-inline-styles
+      style={{ tintColor: color, resizeMode: 'contain' }}
     />
   );
 }
