@@ -83,7 +83,12 @@ export function NewTicket() {
     });
   };
 
-  console.log('I m images array', JSON.stringify(images));
+  //Remove the file
+  const removeFile = (index) => {
+    const filteredArray = [...images];
+    filteredArray.splice(index, 1);
+    setImages(filteredArray);
+  };
 
   return (
     <ScrollView contentContainerStyle={[styles.container, { backgroundColor: colors.white }]}>
@@ -190,11 +195,13 @@ export function NewTicket() {
           <Text>Launch Image Gallery</Text>
         </TouchableOpacity>
         {images &&
-          images.forEach((item, index) => {
-            <Text style={{ backgroundColor: 'blue' }}>hello I am here</Text>;
-            console.log('I m index', index);
-            console.log('I m item', item);
-            console.log('I m item filename', JSON.stringify(item.assets[index]?.fileName));
+          images.map((item, index) => {
+            return (
+              <View key={index}>
+                <Text>{item?.assets[0]?.fileName}</Text>
+                <Button onPress={() => removeFile(index)} title="Delete" />
+              </View>
+            );
           })}
       </View>
     </ScrollView>
