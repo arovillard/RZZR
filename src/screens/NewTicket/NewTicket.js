@@ -62,13 +62,20 @@ export function NewTicket() {
       alignItems: 'center',
     },
     submitButton: {
-      marginTop: spacing.xl,
+      marginTop: spacing.l,
     },
     textWrapper: {
       flexDirection: 'row',
       justifyContent: 'space-around',
       marginRight: spacing.l,
       marginTop: spacing.xs,
+    },
+    cancelButton: {
+      left: '24.15%',
+      right: '69.74%',
+      bottom: '440%',
+      width: 16,
+      height: 16,
     },
   });
 
@@ -219,12 +226,13 @@ export function NewTicket() {
                   source={{
                     uri: item?.assets[0]?.uri,
                   }}
+                  style={{ width: 94, height: 60 }}
                 />
                 <TouchableOpacity accessibilityRole="button" onPress={() => removeFile(index)}>
                   <Image
                     accessibilityIgnoresInvertColors
                     source={close}
-                    style={{ width: 16, height: 16 }}
+                    style={newTicketStyles.cancelButton}
                   />
                 </TouchableOpacity>
               </View>
