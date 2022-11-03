@@ -22,6 +22,7 @@ describe('Home', () => {
   it('should render a welcome message with the user name', () => {
     const { getByText } = render(withProviders(<Home />, { initialState: fakeStore }));
 
-    expect(getByText(`${strings.home.message} johndoe`)).toBeTruthy();
+    expect(getByText(`Hello,`)).toBeTruthy();
+    expect(getByText(`johndoe`)).toBeTruthy();
   });
 });

@@ -6,7 +6,8 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    paddingHorizontal: spacing.xl,
+    paddingHorizontal: spacing.xs,
+    paddingTop: 50,
   },
   submitButton: {
     marginTop: spacing.m,
