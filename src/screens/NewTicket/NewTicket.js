@@ -86,6 +86,9 @@ export function NewTicket() {
       } else if (res.customButton) {
         console.log('User tapped custom button on camera launch: ', res.customButton);
       } else {
+        if (res.errorCode === 'camera_unavailable') {
+          alert(JSON.stringify(res));
+        }
         if (!res.errorCode) {
           setImages((images) => [...images, res]);
         }
@@ -216,7 +219,6 @@ export function NewTicket() {
                   source={{
                     uri: item?.assets[0]?.uri,
                   }}
-                  style={newTicketStyles.image}
                 />
                 <TouchableOpacity accessibilityRole="button" onPress={() => removeFile(index)}>
                   <Image
