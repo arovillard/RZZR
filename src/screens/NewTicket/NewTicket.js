@@ -74,8 +74,6 @@ export function NewTicket() {
       left: '90%',
       right: '69.74%',
       bottom: '440%',
-      width: 16,
-      height: 16,
     },
     addedImagesStyle: {
       width: 94,
