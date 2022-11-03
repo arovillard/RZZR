@@ -84,6 +84,7 @@ export function NewTicket() {
     addedImagesWrapper: {
       flexDirection: 'row',
       justifyContent: 'space-around',
+      flexWrap: 'wrap',
     },
   });
 
