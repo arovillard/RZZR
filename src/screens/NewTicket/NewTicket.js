@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ScrollView, View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
 import { useForm } from 'react-hook-form';
 import { useNavigation, useTheme } from '@react-navigation/native';
@@ -19,6 +19,7 @@ export function NewTicket() {
     control,
     handleSubmit,
     formState: { errors },
+    setValue,
   } = useForm({
     defaultValues: {
       customerName: '',
@@ -28,6 +29,7 @@ export function NewTicket() {
       lotNumber: '',
       surgeon: '',
       poNumber: '',
+      photos: [],
     },
   });
 
@@ -88,6 +90,16 @@ export function NewTicket() {
   const onSubmit = (data) => {
     navigation.navigate('ConfirmTicket', { ticket: { ...data } });
   };
+
+  useEffect(() => {
+    const photosArray = [];
+    if (images) {
+      images.forEach((item) => {
+        photosArray.push(item.assets[0].uri);
+      });
+      setValue("photos", [...photosArray]);
+    }
+  }, [images]);
 
   //Launch Camera
   const cameraLaunch = () => {
