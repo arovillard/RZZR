@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
-import { ScrollView, View, Text, TouchableOpacity } from 'react-native';
+import { ScrollView, View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
 import { useForm } from 'react-hook-form';
 import { useNavigation, useTheme } from '@react-navigation/native';
 import { compressImageConvertToBase64 } from '../../utils/compressImageConvertToBase64';
 import { Button, ControlledTextField } from '@/components';
 import { strings } from '@/localization';
-import { styles } from '@/screens/Login/Login.styles';
-import { shadow } from '@/theme';
+import { shadow, spacing, typography } from '@/theme';
+import { camera, library, close } from '@/assets';
 
 export function NewTicket() {
   const navigation = useNavigation();
   var ImagePicker = require('react-native-image-picker');
   const [images, setImages] = useState([]);
-  let testing = '';
+  let compressedString = '';
   const { colors } = useTheme();
 
   const {
@@ -40,6 +40,38 @@ export function NewTicket() {
     maxHeight: 1024,
   };
 
+  const newTicketStyles = StyleSheet.create({
+    container: {
+      paddingHorizontal: spacing.s,
+    },
+    formContainer: {
+      width: '100%',
+    },
+    imagesWrapper: {
+      flexDirection: 'row',
+    },
+    imagesContainer: {
+      flex: 1,
+      backgroundColor: colors.lightGrey,
+      borderRadius: 3,
+      paddingTop: spacing.s,
+      paddingBottom: spacing.s,
+      paddingLeft: spacing.m,
+      paddingRight: spacing.m,
+      marginRight: spacing.l,
+      alignItems: 'center',
+    },
+    submitButton: {
+      marginTop: spacing.xl,
+    },
+    textWrapper: {
+      flexDirection: 'row',
+      justifyContent: 'space-around',
+      marginRight: spacing.l,
+      marginTop: spacing.xs,
+    },
+  });
+
   const onSubmit = (data) => {
     navigation.navigate('ConfirmTicket', { ticket: { ...data } });
   };
@@ -54,18 +86,16 @@ export function NewTicket() {
       } else if (res.customButton) {
         console.log('User tapped custom button on camera launch: ', res.customButton);
       } else {
-        alert(JSON.stringify(res));
         if (!res.errorCode) {
-          compressImageConvertToBase64(res?.assets[0].uri);
+          setImages((images) => [...images, res]);
         }
-        setImages((images) => [...images, res]);
       }
     });
   };
 
   //Launch Image Gallery
   const imageGalleryLaunch = () => {
-    ImagePicker.launchImageLibrary(options, async (res) => {
+    ImagePicker.launchImageLibrary(options, (res) => {
       if (res.didCancel) {
         console.log('User cancelled image gallery');
       } else if (res.error) {
@@ -73,12 +103,9 @@ export function NewTicket() {
       } else if (res.customButton) {
         console.log('User tapped custom button on image/gallery launch: ', res.customButton);
       } else {
-        alert(JSON.stringify(res));
         if (!res.errorCode) {
-          testing = compressImageConvertToBase64(res?.assets[0].uri);
-          console.log('testing ============================', testing);
+          setImages((images) => [...images, res]);
         }
-        setImages((images) => [...images, res]);
       }
     });
   };
@@ -91,8 +118,10 @@ export function NewTicket() {
   };
 
   return (
-    <ScrollView contentContainerStyle={[styles.container, { backgroundColor: colors.white }]}>
-      <View style={[styles.formContainer, shadow.primary]}>
+    <ScrollView
+      contentContainerStyle={[newTicketStyles.container, { backgroundColor: colors.white }]}
+    >
+      <View style={[newTicketStyles.formContainer, shadow.primary]}>
         <ControlledTextField
           name="customerName"
           errors={errors.customerName}
@@ -172,37 +201,65 @@ export function NewTicket() {
           placeholder={strings.ticket.poNumber}
         />
 
-        <Button
-          onPress={handleSubmit(onSubmit)}
-          style={styles.submitButton}
-          title={strings.ticket.buttonReview}
-        />
-      </View>
-      <View>
-        <Text>Pick Images from Camera & Gallery</Text>
-        <TouchableOpacity
-          accessibilityRole="button"
-          onPress={cameraLaunch}
-          style={styles.submitButton}
-        >
-          <Text>Launch Camera Directly</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          accessibilityRole="button"
-          onPress={imageGalleryLaunch}
-          style={styles.submitButton}
-        >
-          <Text>Launch Image Gallery</Text>
-        </TouchableOpacity>
+        <Text style={[typography.text, { color: colors.textLight, marginBottom: spacing.m }]}>
+          {strings.ticket.textAddPhotos}
+        </Text>
+
         {images &&
           images.map((item, index) => {
+            compressedString = compressImageConvertToBase64(item?.assets[0].uri);
+            console.log('compressedString', compressedString);
             return (
               <View key={index}>
-                <Text>{item?.assets[0]?.fileName}</Text>
-                <Button onPress={() => removeFile(index)} title="Delete" />
+                <Image
+                  accessibilityIgnoresInvertColors
+                  source={{
+                    uri: item?.assets[0]?.uri,
+                  }}
+                  style={newTicketStyles.image}
+                />
+                <TouchableOpacity accessibilityRole="button" onPress={() => removeFile(index)}>
+                  <Image
+                    accessibilityIgnoresInvertColors
+                    source={close}
+                    style={{ width: 16, height: 16 }}
+                  />
+                </TouchableOpacity>
               </View>
             );
           })}
+
+        <View style={newTicketStyles.imagesWrapper}>
+          <TouchableOpacity
+            accessibilityRole="button"
+            onPress={cameraLaunch}
+            style={newTicketStyles.imagesContainer}
+          >
+            <Image accessibilityIgnoresInvertColors source={camera} />
+          </TouchableOpacity>
+          <TouchableOpacity
+            accessibilityRole="button"
+            onPress={imageGalleryLaunch}
+            style={newTicketStyles.imagesContainer}
+          >
+            <Image accessibilityIgnoresInvertColors source={library} />
+          </TouchableOpacity>
+        </View>
+
+        <View style={newTicketStyles.textWrapper}>
+          <Text style={[typography.label, { color: colors.textLight }]}>
+            {strings.ticket.textCamera}
+          </Text>
+          <Text style={[typography.label, { color: colors.textLight }]}>
+            {strings.ticket.textLibrary}
+          </Text>
+        </View>
+
+        <Button
+          onPress={handleSubmit(onSubmit)}
+          style={newTicketStyles.submitButton}
+          title={strings.ticket.buttonReview}
+        />
       </View>
     </ScrollView>
   );
