@@ -71,11 +71,19 @@ export function NewTicket() {
       marginTop: spacing.xs,
     },
     cancelButton: {
-      left: '24.15%',
+      left: '90%',
       right: '69.74%',
       bottom: '440%',
       width: 16,
       height: 16,
+    },
+    addedImagesStyle: {
+      width: 94,
+      height: 60,
+    },
+    addedImagesWrapper: {
+      flexDirection: 'row',
+      justifyContent: 'space-around',
     },
   });
 
@@ -215,29 +223,31 @@ export function NewTicket() {
           {strings.ticket.textAddPhotos}
         </Text>
 
-        {images &&
-          images.map((item, index) => {
-            compressedString = compressImageConvertToBase64(item?.assets[0].uri);
-            console.log('compressedString', compressedString);
-            return (
-              <View key={index}>
-                <Image
-                  accessibilityIgnoresInvertColors
-                  source={{
-                    uri: item?.assets[0]?.uri,
-                  }}
-                  style={{ width: 94, height: 60 }}
-                />
-                <TouchableOpacity accessibilityRole="button" onPress={() => removeFile(index)}>
+        <View style={newTicketStyles.addedImagesWrapper}>
+          {images &&
+            images.map((item, index) => {
+              compressedString = compressImageConvertToBase64(item?.assets[0].uri);
+              console.log('compressedString', compressedString);
+              return (
+                <View key={index}>
                   <Image
                     accessibilityIgnoresInvertColors
-                    source={close}
-                    style={newTicketStyles.cancelButton}
+                    source={{
+                      uri: item?.assets[0]?.uri,
+                    }}
+                    style={newTicketStyles.addedImagesStyle}
                   />
-                </TouchableOpacity>
-              </View>
-            );
-          })}
+                  <TouchableOpacity accessibilityRole="button" onPress={() => removeFile(index)}>
+                    <Image
+                      accessibilityIgnoresInvertColors
+                      source={close}
+                      style={newTicketStyles.cancelButton}
+                    />
+                  </TouchableOpacity>
+                </View>
+              );
+            })}
+        </View>
 
         <View style={newTicketStyles.imagesWrapper}>
           <TouchableOpacity

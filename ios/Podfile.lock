@@ -314,7 +314,7 @@ PODS:
     - React
   - react-native-image-picker (4.10.0):
     - React-Core
-  - react-native-safe-area-context (3.3.2):
+  - react-native-safe-area-context (3.4.1):
     - React-Core
   - React-perflogger (0.70.3)
   - React-RCTActionSheet (0.70.3):
@@ -652,7 +652,7 @@ SPEC CHECKSUMS:
   react-native-config: 6502b1879f97ed5ac570a029961fc35ea606cd14
   react-native-image-base64: 2ff9ac788639c87a91361ab6652cc95e871b1e54
   react-native-image-picker: 4bc9ed38c8be255b515d8c88babbaf74973f91a8
-  react-native-safe-area-context: 584dc04881deb49474363f3be89e4ca0e854c057
+  react-native-safe-area-context: 9e40fb181dac02619414ba1294d6c2a807056ab9
   React-perflogger: 082b4293f0b3914ff41da35a6c06ac4490fcbcc8
   React-RCTActionSheet: 83da3030deb5dea54b398129f56540a44e64d3ae
   React-RCTAnimation: bac3a4f4c0436554d9f7fbb1352a0cdcb1fb0f1c

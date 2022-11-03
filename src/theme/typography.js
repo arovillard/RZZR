@@ -1,6 +1,10 @@
 import { StyleSheet } from 'react-native';
 
 export const typography = StyleSheet.create({
+  header: {
+    fontSize: 20,
+    fontWeight: '700',
+  },
   title: {
     fontSize: 18,
     fontWeight: '700',
@@ -11,7 +15,7 @@ export const typography = StyleSheet.create({
   },
   label: {
     fontSize: 12,
-    fontWeight: '700',
+    fontWeight: '400',
   },
   error: {
     fontSize: 14,
