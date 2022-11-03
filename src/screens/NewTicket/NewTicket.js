@@ -98,8 +98,6 @@ export function NewTicket() {
         console.log('User cancelled camera launch');
       } else if (res.error) {
         console.log('Camera Launch Error: ', res.error);
-      } else if (res.customButton) {
-        console.log('User tapped custom button on camera launch: ', res.customButton);
       } else {
         if (res.errorCode === 'camera_unavailable') {
           alert(JSON.stringify(res));
@@ -118,8 +116,6 @@ export function NewTicket() {
         console.log('User cancelled image gallery');
       } else if (res.error) {
         console.log('Image Gallery Error: ', res.error);
-      } else if (res.customButton) {
-        console.log('User tapped custom button on image/gallery launch: ', res.customButton);
       } else {
         if (!res.errorCode) {
           setImages((images) => [...images, res]);
