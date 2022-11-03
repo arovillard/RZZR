@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTheme } from '@react-navigation/native';
-import { Text, View } from 'react-native';
+import { Text, View, Image, StyleSheet } from 'react-native';
 import { Button } from '@/components';
 import { strings } from '@/localization';
 import { createTicket, TYPES } from '@/actions/TicketActions';
@@ -19,10 +19,40 @@ export function ConfirmTicket({ route, navigation }) {
     navigation.navigate('CustomerNavigator', { screen: 'Customer' });
   };
 
+  const confirmTicketStyles = StyleSheet.create({
+    reviewImagesWrapper: {
+      flexDirection: 'row',
+      justifyContent: 'space-around',
+      flexWrap: 'wrap',
+    },
+    reviewImagesStyle: {
+      width: 94,
+      height: 60,
+    },
+  });
+
   return (
     <View style={[styles.container, { backgroundColor: colors.white }]}>
       <Text>Here we are going to review the ticket before submit</Text>
       <Text>{JSON.stringify(ticket, null, 2)}</Text>
+
+      <View style={confirmTicketStyles.reviewImagesWrapper}>
+        {ticket.photos &&
+          ticket.photos.map((item, index) => {
+            return (
+              <View key={index}>
+                <Image
+                  accessibilityIgnoresInvertColors
+                  source={{
+                    uri: item,
+                  }}
+                  style={confirmTicketStyles.reviewImagesStyle}
+                />
+              </View>
+            );
+          })}
+      </View>
+
       <Button
         onPress={submitForm}
         style={styles.submitButton}

@@ -89,6 +89,10 @@ export function NewTicket() {
   });
 
   const onSubmit = (data) => {
+    // const compressedStringArray = [];
+    // data.photos.forEach((item) => {
+    //   compressedStringArray.push(compressImageConvertToBase64(item));
+    // });
     navigation.navigate('ConfirmTicket', { ticket: { ...data } });
   };
 
@@ -233,8 +237,6 @@ export function NewTicket() {
         <View style={newTicketStyles.addedImagesWrapper}>
           {images &&
             images.map((item, index) => {
-              compressedString = compressImageConvertToBase64(item?.assets[0].uri);
-              console.log('compressedString', compressedString);
               return (
                 <View key={index}>
                   <Image
