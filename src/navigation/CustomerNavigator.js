@@ -1,13 +1,7 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 import { NAVIGATION } from '@/constants';
-import {
-  ViewTicket,
-  NewTicket,
-  Customer,
-  ConfirmTicket,
-  ConfirmationSuccessPending,
-} from '@/screens';
+import { ViewTicket, NewTicket, Customer, ConfirmTicket, SuccessPendingFailure } from '@/screens';
 
 const Stack = createNativeStackNavigator();
 
@@ -35,8 +29,8 @@ export function CustomerNavigator() {
         options={{ headerLargeTitle: false }}
       />
       <Stack.Screen
-        name={NAVIGATION.confirmationSuccessPending}
-        component={ConfirmationSuccessPending}
+        name={NAVIGATION.successPendingFailure}
+        component={SuccessPendingFailure}
         options={{ headerLargeTitle: false }}
       />
     </Stack.Navigator>

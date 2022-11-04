@@ -22,7 +22,7 @@ export function ConfirmTicket({ route, navigation }) {
     });
     console.log('I m compressedStringArray', compressedStringArray);
     dispatch(createTicket(ticket));
-    navigation.navigate('CustomerNavigator', { screen: 'ConfirmationSuccessPending' });
+    navigation.navigate('CustomerNavigator', { screen: 'SuccessPendingFailure' });
   };
 
   const confirmTicketStyles = StyleSheet.create({

@@ -7,5 +7,5 @@ export const NAVIGATION = {
   viewTicket: 'ViewTicket',
   confirmTicket: 'ConfirmTicket',
   customerNavigator: 'CustomerNavigator',
-  confirmationSuccessPending: 'ConfirmationSuccessPending',
+  successPendingFailure: 'SuccessPendingFailure',
 };

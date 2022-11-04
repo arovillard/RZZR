@@ -1,12 +1,12 @@
 import React from 'react';
 import { useTheme } from '@react-navigation/native';
 import { Text, View, Image, StyleSheet } from 'react-native';
-import { styles } from '@/screens/ConfirmationSuccessPending/ConfirmationSuccessPending.styles';
+import { styles } from '@/screens/SuccessPendingFailure/SuccessPendingFailure.styles';
 import { spacing, typography } from '@/theme';
 import { Button } from '@/components';
 import { success, pending, failure } from '@/assets';
 
-export function ConfirmationSuccessPending() {
+export function SuccessPendingFailure() {
   const { colors } = useTheme();
 
   const confirmationTicketStyles = StyleSheet.create({
