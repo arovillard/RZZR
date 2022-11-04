@@ -7,9 +7,11 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     paddingHorizontal: spacing.l,
-    textAlign: 'center',
+    paddingTop: spacing.xl,
   },
   submitButton: {
-    marginTop: spacing.m,
+    position: 'absolute',
+    bottom: 0,
+    marginBottom: spacing.m,
   },
 });
