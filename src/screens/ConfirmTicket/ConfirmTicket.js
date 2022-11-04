@@ -16,7 +16,7 @@ export function ConfirmTicket({ route, navigation }) {
 
   const submitForm = () => {
     dispatch(createTicket(ticket));
-    navigation.navigate('CustomerNavigator', { screen: 'Customer' });
+    navigation.navigate('CustomerNavigator', { screen: 'ConfirmationSuccessPending' });
   };
 
   return (
