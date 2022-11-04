@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { ScrollView, View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
 import { useForm } from 'react-hook-form';
 import { useNavigation, useTheme } from '@react-navigation/native';
-import { compressImageConvertToBase64 } from '../../utils/compressImageConvertToBase64';
 import { Button, ControlledTextField } from '@/components';
 import { strings } from '@/localization';
 import { shadow, spacing, typography } from '@/theme';
@@ -12,7 +11,6 @@ export function NewTicket() {
   const navigation = useNavigation();
   var ImagePicker = require('react-native-image-picker');
   const [images, setImages] = useState([]);
-  let compressedString = '';
   const { colors } = useTheme();
 
   const {
@@ -89,10 +87,6 @@ export function NewTicket() {
   });
 
   const onSubmit = (data) => {
-    // const compressedStringArray = [];
-    // data.photos.forEach((item) => {
-    //   compressedStringArray.push(compressImageConvertToBase64(item));
-    // });
     navigation.navigate('ConfirmTicket', { ticket: { ...data } });
   };
 
