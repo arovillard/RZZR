@@ -33,6 +33,9 @@ export const en = {
     buttonReview: 'Review Submission',
     buttonSubmit: 'Submit Ticket',
     apiError: 'There was an issue with the ticket submission',
+    textAddPhotos: 'Add photo(s) - optional',
+    textCamera: 'Camera',
+    textLibrary: 'Library',
   },
   customer: {
     customers: 'Customers',

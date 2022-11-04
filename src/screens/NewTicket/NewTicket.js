@@ -1,20 +1,23 @@
-import React from 'react';
-import { ScrollView, View } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { ScrollView, View, Text, TouchableOpacity, Image, StyleSheet } from 'react-native';
 import { useForm } from 'react-hook-form';
 import { useNavigation, useTheme } from '@react-navigation/native';
 import { Button, ControlledTextField } from '@/components';
 import { strings } from '@/localization';
-import { styles } from '@/screens/Login/Login.styles';
-import { shadow } from '@/theme';
+import { shadow, spacing, typography } from '@/theme';
+import { camera, library, close } from '@/assets';
 
 export function NewTicket() {
   const navigation = useNavigation();
+  var ImagePicker = require('react-native-image-picker');
+  const [images, setImages] = useState([]);
   const { colors } = useTheme();
 
   const {
     control,
     handleSubmit,
     formState: { errors },
+    setValue,
   } = useForm({
     defaultValues: {
       customerName: '',
@@ -24,15 +27,124 @@ export function NewTicket() {
       lotNumber: '',
       surgeon: '',
       poNumber: '',
+      photos: [],
+    },
+  });
+
+  let options = {
+    storageOptions: {
+      skipBackup: true,
+      path: 'images',
+    },
+    maxWidth: 1024,
+    maxHeight: 1024,
+  };
+
+  const newTicketStyles = StyleSheet.create({
+    container: {
+      paddingHorizontal: spacing.s,
+    },
+    formContainer: {
+      width: '100%',
+    },
+    imagesWrapper: {
+      flexDirection: 'row',
+    },
+    imagesContainer: {
+      flex: 1,
+      backgroundColor: colors.lightGrey,
+      borderRadius: 3,
+      paddingTop: spacing.s,
+      paddingBottom: spacing.s,
+      paddingLeft: spacing.m,
+      paddingRight: spacing.m,
+      marginRight: spacing.l,
+      alignItems: 'center',
+    },
+    submitButton: {
+      marginTop: spacing.l,
+    },
+    textWrapper: {
+      flexDirection: 'row',
+      justifyContent: 'space-around',
+      marginRight: spacing.l,
+      marginTop: spacing.xs,
+    },
+    cancelButton: {
+      left: '90%',
+      right: '69.74%',
+      bottom: '440%',
+    },
+    addedImagesStyle: {
+      width: 94,
+      height: 60,
+    },
+    addedImagesWrapper: {
+      flexDirection: 'row',
+      justifyContent: 'space-around',
+      flexWrap: 'wrap',
     },
   });
 
   const onSubmit = (data) => {
     navigation.navigate('ConfirmTicket', { ticket: { ...data } });
   };
+
+  useEffect(() => {
+    const photosArray = [];
+    if (images) {
+      images.forEach((item) => {
+        photosArray.push(item.assets[0].uri);
+      });
+      setValue("photos", [...photosArray]);
+    }
+  }, [images]);
+
+  //Launch Camera
+  const cameraLaunch = () => {
+    ImagePicker.launchCamera(options, (res) => {
+      if (res.didCancel) {
+        console.log('User cancelled camera launch');
+      } else if (res.error) {
+        console.log('Camera Launch Error: ', res.error);
+      } else {
+        if (res.errorCode === 'camera_unavailable') {
+          alert(JSON.stringify(res));
+        }
+        if (!res.errorCode) {
+          setImages((images) => [...images, res]);
+        }
+      }
+    });
+  };
+
+  //Launch Image Gallery
+  const imageGalleryLaunch = () => {
+    ImagePicker.launchImageLibrary(options, (res) => {
+      if (res.didCancel) {
+        console.log('User cancelled image gallery');
+      } else if (res.error) {
+        console.log('Image Gallery Error: ', res.error);
+      } else {
+        if (!res.errorCode) {
+          setImages((images) => [...images, res]);
+        }
+      }
+    });
+  };
+
+  //Remove the file
+  const removeFile = (index) => {
+    const filteredArray = [...images];
+    filteredArray.splice(index, 1);
+    setImages(filteredArray);
+  };
+
   return (
-    <ScrollView contentContainerStyle={[styles.container, { backgroundColor: colors.white }]}>
-      <View style={[styles.formContainer, shadow.primary]}>
+    <ScrollView
+      contentContainerStyle={[newTicketStyles.container, { backgroundColor: colors.white }]}
+    >
+      <View style={[newTicketStyles.formContainer, shadow.primary]}>
         <ControlledTextField
           name="customerName"
           errors={errors.customerName}
@@ -112,9 +224,63 @@ export function NewTicket() {
           placeholder={strings.ticket.poNumber}
         />
 
+        <Text style={[typography.text, { color: colors.textLight, marginBottom: spacing.m }]}>
+          {strings.ticket.textAddPhotos}
+        </Text>
+
+        <View style={newTicketStyles.addedImagesWrapper}>
+          {images &&
+            images.map((item, index) => {
+              return (
+                <View key={index}>
+                  <Image
+                    accessibilityIgnoresInvertColors
+                    source={{
+                      uri: item?.assets[0]?.uri,
+                    }}
+                    style={newTicketStyles.addedImagesStyle}
+                  />
+                  <TouchableOpacity accessibilityRole="button" onPress={() => removeFile(index)}>
+                    <Image
+                      accessibilityIgnoresInvertColors
+                      source={close}
+                      style={newTicketStyles.cancelButton}
+                    />
+                  </TouchableOpacity>
+                </View>
+              );
+            })}
+        </View>
+
+        <View style={newTicketStyles.imagesWrapper}>
+          <TouchableOpacity
+            accessibilityRole="button"
+            onPress={cameraLaunch}
+            style={newTicketStyles.imagesContainer}
+          >
+            <Image accessibilityIgnoresInvertColors source={camera} />
+          </TouchableOpacity>
+          <TouchableOpacity
+            accessibilityRole="button"
+            onPress={imageGalleryLaunch}
+            style={newTicketStyles.imagesContainer}
+          >
+            <Image accessibilityIgnoresInvertColors source={library} />
+          </TouchableOpacity>
+        </View>
+
+        <View style={newTicketStyles.textWrapper}>
+          <Text style={[typography.label, { color: colors.textLight }]}>
+            {strings.ticket.textCamera}
+          </Text>
+          <Text style={[typography.label, { color: colors.textLight }]}>
+            {strings.ticket.textLibrary}
+          </Text>
+        </View>
+
         <Button
           onPress={handleSubmit(onSubmit)}
-          style={styles.submitButton}
+          style={newTicketStyles.submitButton}
           title={strings.ticket.buttonReview}
         />
       </View>
