@@ -22,10 +22,21 @@ export function ViewTicket({ route, navigation }) {
     },
   });
 
+  const replacePhotosArray = (key, value) => {
+    if (key === 'photos') {
+      return '';
+    } else {
+      return value;
+    }
+  };
+
+  const omitPhotosArray = JSON.stringify(ticket, replacePhotosArray, 2);
+
   return (
     <View style={[styles.container, { backgroundColor: colors.white }]}>
       <Text>Here we are going to view a ticket {ticketId}</Text>
-      <Text>{JSON.stringify(ticket, null, 2)}</Text>
+
+      <Text>{omitPhotosArray}</Text>
 
       <View style={viewTicketStyles.viewImagesWrapper}>
         {ticket.photos &&

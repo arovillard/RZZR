@@ -31,10 +31,21 @@ export function ConfirmTicket({ route, navigation }) {
     },
   });
 
+  const replacePhotosArray = (key, value) => {
+    if (key === 'photos') {
+      return '';
+    } else {
+      return value;
+    }
+  };
+
+  const omitPhotosArray = JSON.stringify(ticket, replacePhotosArray, 2);
+
   return (
     <View style={[styles.container, { backgroundColor: colors.white }]}>
       <Text>Here we are going to review the ticket before submit</Text>
-      <Text>{JSON.stringify(ticket, null, 2)}</Text>
+
+      <Text>{omitPhotosArray}</Text>
 
       <View style={confirmTicketStyles.reviewImagesWrapper}>
         {ticket.photos &&
