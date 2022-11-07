@@ -15,11 +15,7 @@ export function SubmissionStatus({ route }) {
 
   const confirmationTicketStyles = StyleSheet.create({
     imageWrapper: {
-      position: 'absolute',
       top: 100,
-    },
-    textWrapper: {
-      paddingTop: spacing.xl,
     },
     statusCircle3: {
       width: 200,
@@ -90,6 +86,7 @@ export function SubmissionStatus({ route }) {
           </View>
         </View>
       </View>
+
       <Text style={[typography.text, { paddingTop: spacing.xl, textAlign: 'center' }]}>
         {ticketStatus === 'success'
           ? strings.ticket.ticketStatusSucess
@@ -97,9 +94,9 @@ export function SubmissionStatus({ route }) {
           ? strings.ticket.ticketStatusPending
           : strings.ticket.ticketStatusFaliure}
       </Text>
+
       <Button
         onPress={handleSubmit}
-        style={styles.submitButton}
         title={
           ticketStatus === 'success'
             ? strings.ticket.buttonSuccess
