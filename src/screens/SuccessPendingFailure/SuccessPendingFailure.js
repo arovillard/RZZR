@@ -5,8 +5,10 @@ import { styles } from '@/screens/SuccessPendingFailure/SuccessPendingFailure.st
 import { spacing, typography } from '@/theme';
 import { Button } from '@/components';
 import { success, pending, failure } from '@/assets';
+import { strings } from '@/localization';
 
-export function SuccessPendingFailure() {
+export function SuccessPendingFailure({ route }) {
+  const { ticketStatus } = route.params;
   const { colors } = useTheme();
 
   const confirmationTicketStyles = StyleSheet.create({
@@ -93,60 +95,65 @@ export function SuccessPendingFailure() {
 
   return (
     <View style={[styles.container, { backgroundColor: colors.white }]}>
-      {/* Success */}
-      {/* <View style={confirmationTicketStyles.imageWrapper}>
-        <View style={confirmationTicketStyles.successCircle3}>
-          <View style={confirmationTicketStyles.successCircle2}>
-            <View style={confirmationTicketStyles.successCircle1}>
-              <Image accessibilityIgnoresInvertColors source={success} />
-            </View>
-          </View>
-        </View>
-      </View>
-      <Text style={[typography.text, { paddingTop: spacing.xl, textAlign: 'center' }]}>
-        Your usage Ticket has been successfully submitted.
-      </Text>
-      <Button
-        // onPress={handleSubmit(onSubmit)}
-        style={styles.submitButton}
-        title="Done"
-      /> */}
-      {/* Pending */}
-      {/* <View style={confirmationTicketStyles.imageWrapper}>
-        <View style={confirmationTicketStyles.pendingCircle3}>
-          <View style={confirmationTicketStyles.pendingCircle2}>
-            <View style={confirmationTicketStyles.pendingCircle1}>
-              <Image accessibilityIgnoresInvertColors source={pending} />
-            </View>
-          </View>
-        </View>
-      </View>
-      <Text style={[typography.text, { paddingTop: spacing.xl, textAlign: 'center'}]}>
-        You are currently not connected to the internet. Once you regain access to your network you
-        will have to manually submit this usage ticket.
-      </Text>
-      <Button
-        // onPress={handleSubmit(onSubmit)}
-        style={styles.submitButton}
-        title="View Pending Ticket"
-      /> */}
-      {/* Failure */}
       <View style={confirmationTicketStyles.imageWrapper}>
-        <View style={confirmationTicketStyles.failureCircle3}>
-          <View style={confirmationTicketStyles.failureCircle2}>
-            <View style={confirmationTicketStyles.failureCircle1}>
-              <Image accessibilityIgnoresInvertColors source={failure} />
+        <View
+          style={
+            ticketStatus === 'success'
+              ? confirmationTicketStyles.successCircle3
+              : ticketStatus === 'pending'
+              ? confirmationTicketStyles.pendingCircle3
+              : confirmationTicketStyles.failureCircle3
+          }
+        >
+          <View
+            style={
+              ticketStatus === 'success'
+                ? confirmationTicketStyles.successCircle2
+                : ticketStatus === 'pending'
+                ? confirmationTicketStyles.pendingCircle2
+                : confirmationTicketStyles.failureCircle2
+            }
+          >
+            <View
+              style={
+                ticketStatus === 'success'
+                  ? confirmationTicketStyles.successCircle1
+                  : ticketStatus === 'pending'
+                  ? confirmationTicketStyles.pendingCircle1
+                  : confirmationTicketStyles.failureCircle1
+              }
+            >
+              <Image
+                accessibilityIgnoresInvertColors
+                source={
+                  ticketStatus === 'success'
+                    ? success
+                    : ticketStatus === 'pending'
+                    ? pending
+                    : failure
+                }
+              />
             </View>
           </View>
         </View>
       </View>
       <Text style={[typography.text, { paddingTop: spacing.xl, textAlign: 'center' }]}>
-        Submission failed. Please try submitting the ticket again.
+        {ticketStatus === 'success'
+          ? strings.ticket.ticketStatusSucess
+          : ticketStatus === 'pending'
+          ? strings.ticket.ticketStatusPending
+          : strings.ticket.ticketStatusFaliure}
       </Text>
       <Button
         // onPress={handleSubmit(onSubmit)}
         style={styles.submitButton}
-        title="Try Again"
+        title={
+          ticketStatus === 'success'
+            ? strings.ticket.buttonSuccess
+            : ticketStatus === 'pending'
+            ? strings.ticket.buttonPending
+            : strings.ticket.buttonFailure
+        }
       />
     </View>
   );
