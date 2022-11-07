@@ -5,4 +5,4 @@ export { Customer } from '@/screens/Customer/Customer';
 export { NewTicket } from '@/screens/NewTicket/NewTicket';
 export { ViewTicket } from '@/screens/ViewTicket/ViewTicket';
 export { ConfirmTicket } from '@/screens/ConfirmTicket/ConfirmTicket';
-export { SuccessPendingFailure } from '@/screens/SuccessPendingFailure/SuccessPendingFailure';
+export { SubmissionStatus } from '@/screens/SubmissionStatus/SubmissionStatus';
