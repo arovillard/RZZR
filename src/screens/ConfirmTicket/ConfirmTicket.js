@@ -25,7 +25,7 @@ export function ConfirmTicket({ route, navigation }) {
     //Passing the ticketStatus prop which can be 'success', 'pending' and 'faliure'.
     navigation.navigate('CustomerNavigator', {
       screen: 'SuccessPendingFailure',
-      params: { ticketStatus: 'success' },
+      params: { ticketStatus: 'success', ticket: ticket },
     });
   };
 

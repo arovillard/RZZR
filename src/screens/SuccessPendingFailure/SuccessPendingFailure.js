@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTheme } from '@react-navigation/native';
+import { useTheme, useNavigation } from '@react-navigation/native';
 import { Text, View, Image, StyleSheet } from 'react-native';
 import { styles } from '@/screens/SuccessPendingFailure/SuccessPendingFailure.styles';
 import { spacing, typography } from '@/theme';
@@ -8,7 +8,9 @@ import { success, pending, failure } from '@/assets';
 import { strings } from '@/localization';
 
 export function SuccessPendingFailure({ route }) {
+  const navigation = useNavigation();
   const { ticketStatus } = route.params;
+  const { ticket } = route.params;
   const { colors } = useTheme();
 
   const confirmationTicketStyles = StyleSheet.create({
@@ -93,6 +95,14 @@ export function SuccessPendingFailure({ route }) {
     },
   });
 
+  const handleSubmit = () => {
+    if (ticketStatus === 'success' || ticketStatus === 'pending') {
+      navigation.navigate('CustomerNavigator', { screen: 'Customer' });
+    } else {
+      navigation.navigate('ConfirmTicket', { ticket: ticket });
+    }
+  };
+
   return (
     <View style={[styles.container, { backgroundColor: colors.white }]}>
       <View style={confirmationTicketStyles.imageWrapper}>
@@ -145,7 +155,7 @@ export function SuccessPendingFailure({ route }) {
           : strings.ticket.ticketStatusFaliure}
       </Text>
       <Button
-        // onPress={handleSubmit(onSubmit)}
+        onPress={handleSubmit}
         style={styles.submitButton}
         title={
           ticketStatus === 'success'
