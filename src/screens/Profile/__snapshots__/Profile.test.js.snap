@@ -7,7 +7,7 @@ exports[`Profile should match the snapshot 1`] = `
       Object {
         "flex": 1,
         "justifyContent": "space-between",
-        "padding": 40,
+        "padding": 16,
       },
       Object {
         "backgroundColor": undefined,
@@ -15,51 +15,114 @@ exports[`Profile should match the snapshot 1`] = `
     ]
   }
 >
-  <Text
+  <View
     style={
       Array [
         Object {
-          "fontSize": 18,
-          "fontWeight": "700",
+          "flexDirection": "row",
+          "justifyContent": "space-evenly",
         },
         Object {
-          "textAlign": "center",
-        },
-        Object {
-          "color": "rgb(28, 28, 30)",
+          "fontSize": 14,
+          "fontWeight": "400",
         },
       ]
     }
   >
-    This screen has the iOS native large header.
-  </Text>
-  <View
-    accessibilityState={
-      Object {
-        "disabled": false,
+    <View
+      style={
+        Object {
+          "width": "50%",
+        }
       }
-    }
-    accessible={true}
-    collapsable={false}
-    focusable={true}
-    onClick={[Function]}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "marginBottom": 16,
+            },
+            Object {
+              "color": undefined,
+            },
+          ]
+        }
+      >
+        Phone Number
+      </Text>
+      <Text
+        style={
+          Array [
+            Object {
+              "marginBottom": 16,
+            },
+            Object {
+              "color": undefined,
+            },
+          ]
+        }
+      >
+        Email
+      </Text>
+      <Text
+        style={
+          Array [
+            Object {
+              "marginBottom": 16,
+            },
+            Object {
+              "color": undefined,
+            },
+          ]
+        }
+      >
+        OEM Affiliation
+      </Text>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "flex-end",
+            "width": "50%",
+          },
+        ]
+      }
+    >
+      <Text
+        style={
+          Object {
+            "marginBottom": 16,
+          }
+        }
+      >
+        (123) 456 7890
+      </Text>
+      <Text
+        style={
+          Object {
+            "marginBottom": 16,
+          }
+        }
+      >
+        agent@razor.com
+      </Text>
+      <Text
+        style={
+          Object {
+            "marginBottom": 16,
+          }
+        }
+      >
+        OEM Name
+      </Text>
+    </View>
+  </View>
+  <View
     style={
       Object {
-        "alignItems": "center",
-        "backgroundColor": "rgb(0, 122, 255)",
-        "borderColor": "rgb(0, 122, 255)",
-        "borderRadius": 3,
-        "borderWidth": 1,
-        "height": 40,
-        "justifyContent": "center",
-        "opacity": 1,
-        "width": "100%",
+        "fontSize": 12,
+        "fontWeight": "400",
       }
     }
   >
@@ -67,18 +130,93 @@ exports[`Profile should match the snapshot 1`] = `
       style={
         Array [
           Object {
-            "color": undefined,
+            "marginBottom": 16,
           },
           Object {
-            "fontSize": 18,
-            "fontWeight": "700",
+            "color": undefined,
           },
-          null,
         ]
       }
     >
-      Logout
+      If you’re having any trouble with the app or require any further information, please reach out to our support team:
     </Text>
+    <Text
+      style={
+        Array [
+          Object {
+            "marginBottom": 16,
+          },
+          Object {
+            "color": undefined,
+            "fontWeight": "bold",
+          },
+        ]
+      }
+    >
+      customerservice@razormi.com
+    </Text>
+    <Text
+      style={
+        Array [
+          Object {
+            "marginBottom": 16,
+          },
+          Object {
+            "color": undefined,
+            "fontWeight": "bold",
+          },
+        ]
+      }
+    >
+      (123) 456 7890
+    </Text>
+    <View
+      accessibilityState={
+        Object {
+          "disabled": false,
+        }
+      }
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgb(0, 122, 255)",
+          "borderColor": "rgb(0, 122, 255)",
+          "borderRadius": 3,
+          "borderWidth": 1,
+          "height": 40,
+          "justifyContent": "center",
+          "opacity": 1,
+          "width": "100%",
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "color": undefined,
+            },
+            Object {
+              "fontSize": 18,
+              "fontWeight": "700",
+            },
+            null,
+          ]
+        }
+      >
+        Logout
+      </Text>
+    </View>
   </View>
 </View>
 `;
