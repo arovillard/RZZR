@@ -5,9 +5,20 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'space-between',
-    padding: spacing.xl,
+    padding: spacing.s,
   },
-  title: {
-    textAlign: 'center',
+  profileContent: {
+    justifyContent: 'space-evenly',
+    flexDirection: 'row',
+  },
+  leftContent: {
+    width: '50%',
+  },
+  rightContent: {
+    width: '50%',
+    alignItems: 'flex-end',
+  },
+  textContent: {
+    marginBottom: spacing.s,
   },
 });
