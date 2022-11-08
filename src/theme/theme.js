@@ -15,6 +15,9 @@ export const theme = {
       inactiveTab: '#a3a2a2',
       white: '#fff',
       lightGrey: '#F2F5F7',
+      success: '#05A818',
+      pending: '#F9D054',
+      failure: '#B3261E',
     },
   },
   dark: {
