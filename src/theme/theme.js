@@ -16,6 +16,9 @@ export const theme = {
       white: '#fff',
       lightGrey: '#F2F5F7',
       darkGrey: '#4B4F58',
+      success: '#05A818',
+      pending: '#F9D054',
+      failure: '#B3261E',
     },
   },
   dark: {

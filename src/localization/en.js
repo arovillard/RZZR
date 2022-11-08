@@ -38,10 +38,17 @@ export const en = {
     poNumber: 'PO Number',
     buttonReview: 'Review Submission',
     buttonSubmit: 'Submit Ticket',
+    buttonSuccess: 'Done',
+    buttonPending: 'View Pending Ticket',
+    buttonFailure: 'Try Again',
     apiError: 'There was an issue with the ticket submission',
     textAddPhotos: 'Add photo(s) - optional',
     textCamera: 'Camera',
     textLibrary: 'Library',
+    ticketStatusSucess: 'Your usage Ticket has been successfully submitted.',
+    ticketStatusPending:
+      'You are currently not connected to the internet. Once you regain access to your network you will have to manually submit this usage ticket.',
+    ticketStatusFaliure: 'Submission failed. Please try submitting the ticket again.',
   },
   customer: {
     customers: 'Customers',

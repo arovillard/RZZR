@@ -7,4 +7,5 @@ export const NAVIGATION = {
   viewTicket: 'ViewTicket',
   confirmTicket: 'ConfirmTicket',
   customerNavigator: 'CustomerNavigator',
+  submissionStatus: 'SubmissionStatus',
 };

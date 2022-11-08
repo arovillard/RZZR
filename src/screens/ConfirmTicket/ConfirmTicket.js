@@ -20,9 +20,13 @@ export function ConfirmTicket({ route, navigation }) {
     ticket.photos.forEach((item) => {
       compressedStringArray.push(compressImageConvertToBase64(item));
     });
-    console.log('I m compressedStringArray', compressedStringArray);
+    console.log('compressedStringArray', compressedStringArray);
     dispatch(createTicket(ticket));
-    navigation.navigate('CustomerNavigator', { screen: 'Customer' });
+    //Passing the ticketStatus prop which can be 'success', 'pending' and 'faliure'.
+    navigation.navigate('CustomerNavigator', {
+      screen: 'SubmissionStatus',
+      params: { ticketStatus: 'success', ticket: ticket },
+    });
   };
 
   const confirmTicketStyles = StyleSheet.create({

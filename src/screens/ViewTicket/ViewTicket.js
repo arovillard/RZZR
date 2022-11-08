@@ -5,7 +5,7 @@ import { useTheme } from '@react-navigation/native';
 import { getTicket } from '@/selectors/TicketSelectors';
 import { styles } from '@/screens/ViewTicket/ViewTicket.styles';
 
-export function ViewTicket({ route, navigation }) {
+export function ViewTicket({ route }) {
   const { ticketId } = route.params;
   const ticket = useSelector(getTicket(ticketId));
   const { colors } = useTheme();
