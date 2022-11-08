@@ -19,7 +19,13 @@ export const en = {
   profile: {
     header: 'Profile',
     logout: 'Logout',
-    message: 'This screen has the iOS native large header.',
+    message:
+      'If you’re having any trouble with the app or require any further information, please reach out to our support team:',
+    customerCareEmailAddress: 'customerservice@razormi.com',
+    customerCarePhoneNumber: '(123) 456 7890',
+    labelPhoneNumber: 'Phone Number',
+    labelEmail: 'Email',
+    labelAffiliation: 'OEM Affiliation',
   },
   ticket: {
     inputFieldHint: 'New ticket form field',

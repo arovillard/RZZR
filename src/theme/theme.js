@@ -15,6 +15,7 @@ export const theme = {
       inactiveTab: '#a3a2a2',
       white: '#fff',
       lightGrey: '#F2F5F7',
+      darkGrey: '#4B4F58',
     },
   },
   dark: {
@@ -30,6 +31,7 @@ export const theme = {
       inactiveTab: '#FFFFFF',
       white: '#fff',
       lightGrey: '#F2F5F7',
+      darkGrey: '#4B4F58',
     },
   },
 };
