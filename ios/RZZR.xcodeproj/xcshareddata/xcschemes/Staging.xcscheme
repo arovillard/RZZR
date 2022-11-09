@@ -15,7 +15,7 @@
                   <BuildableReference
                      BuildableIdentifier = "primary"
                      BlueprintIdentifier = "72C7E06E25E5AB5600C8F72C"
-                     BuildableName = "RZZRStaging.app"
+                     BuildableName = "rzzrStaging.app"
                      BlueprintName = "Staging"
                      ReferencedContainer = "container:rzzr.xcodeproj">
                   </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "72C7E06E25E5AB5600C8F72C"
-               BuildableName = "RZZRStaging.app"
+               BuildableName = "rzzrStaging.app"
                BlueprintName = "Staging"
                ReferencedContainer = "container:rzzr.xcodeproj">
             </BuildableReference>
@@ -63,7 +63,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "72C7E06E25E5AB5600C8F72C"
-            BuildableName = "RZZRStaging.app"
+            BuildableName = "rzzrStaging.app"
             BlueprintName = "Staging"
             ReferencedContainer = "container:rzzr.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "72C7E06E25E5AB5600C8F72C"
-            BuildableName = "RZZRStaging.app"
+            BuildableName = "rzzrStaging.app"
             BlueprintName = "Staging"
             ReferencedContainer = "container:rzzr.xcodeproj">
          </BuildableReference>

@@ -29,17 +29,25 @@ const clearStore = () => ({
   payload: null,
 });
 
-export const login = (username, password) => async (dispatch, _, { demoMode, networkService }) => {
+export const login = (username, password) => async (
+  dispatch,
+  _,
+  { networkService }
+) => {
   try {
     dispatch(loginRequest());
     const userController = new UserController(networkService);
-    const { data } = await userController.login({ username, password, demoMode });
-    if (!demoMode) {
-      networkService.setAccessToken(data.user.accessToken);
+    const { data } = await userController.login({ username, password });
+    if (
+      data.name === userController.USER_MESSAGES.invalidCredential ||
+      data.name === userController.USER_MESSAGES.missingParameter
+    ) {
+      dispatch(loginError(data?.error ?? strings.login.invalidCredentials));
+    } else {
+      dispatch(loginSuccess(data));
     }
-    dispatch(loginSuccess(data.user));
-  } catch ({ data }) {
-    dispatch(loginError(data?.error ?? strings.login.invalidCredentials));
+  } catch (data) {
+    dispatch(loginError(data?.message ?? strings.login.somethingIsWrong));
   }
 };
 
@@ -48,7 +56,7 @@ export const logout = () => async (dispatch, _, { demoMode, networkService }) =>
     const userController = new UserController(networkService);
     await userController.logout({ demoMode });
   } finally {
-    networkService.clearAccessToken();
+    // networkService.clearAccessToken();
     dispatch(clearStore());
   }
 };

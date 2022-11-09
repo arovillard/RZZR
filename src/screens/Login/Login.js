@@ -1,6 +1,6 @@
 import { useTheme } from '@react-navigation/native';
 import React, { useState } from 'react';
-import { View, Image, StyleSheet, Text } from 'react-native';
+import { View, Image, StyleSheet, Text, ActivityIndicator } from 'react-native';
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import { login, TYPES } from '@/actions/UserActions';
 import { Button, ErrorView, TextField } from '@/components';
@@ -69,11 +69,11 @@ export function Login() {
             value={password}
           />
           <ErrorView errors={errors} />
-          <Button
+          {isLoading ? <ActivityIndicator /> : <Button
             onPress={handleSubmit}
             style={styles.submitButton}
             title={isLoading ? strings.common.loading : strings.login.button}
-          />
+          />}
         </View>
       </View>
       <View style={loginStyles.footer}>

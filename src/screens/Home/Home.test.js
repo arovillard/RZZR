@@ -8,7 +8,7 @@ const fakeStore = {
   error: {},
   status: {},
   user: {
-    username: 'johndoe',
+    name: 'johndoe',
   },
 };
 

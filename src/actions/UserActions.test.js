@@ -17,9 +17,8 @@ describe('UserActions', () => {
           payload: {
             user: {
               id: 1,
-              accessToken: '8973272932932eT32e',
-              username: 'username',
-            },
+              name: 'username' 
+            }
           },
         },
       ];
@@ -35,7 +34,7 @@ describe('UserActions', () => {
     });
 
     it('should dispatch LOGIN_REQUEST and LOGIN_ERROR actions with invalid credentials', async () => {
-      const loginErrorActions = [
+      const loginSuccessActionsWithError = [
         {
           type: TYPES.LOGIN_REQUEST,
           payload: null,
@@ -55,7 +54,7 @@ describe('UserActions', () => {
       await store.dispatch(login('username', 'invalidPassword'));
       const actions = store.getActions();
 
-      expect(actions).toEqual(loginErrorActions);
+      expect(actions).toEqual(loginSuccessActionsWithError);
     });
   });
 

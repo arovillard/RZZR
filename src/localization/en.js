@@ -15,6 +15,7 @@ export const en = {
     password: 'Password',
     passwordHint: 'Enter your password',
     invalidCredentials: 'Invalid credentials',
+    somethingIsWrong: 'Something went wrong, please try again',
   },
   profile: {
     header: 'Profile',

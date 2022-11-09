@@ -1,6 +1,6 @@
 export const routes = {
   authentication: {
-    login: '/users',
+    login: '',
     logout: '/users/logout',
   },
   ticket: {

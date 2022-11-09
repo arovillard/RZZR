@@ -5,7 +5,7 @@ describe('UserController', () => {
   describe('login', () => {
     it('should make the login request', async () => {
       const credentials = {
-        username: 'username',
+        email: 'username',
         password: 'password',
       };
 
@@ -14,9 +14,8 @@ describe('UserController', () => {
       await userController.login(credentials);
 
       expect(fakeNetworkService.request).toHaveBeenCalledWith({
-        method: 'POST',
-        url: routes.authentication.login,
-        data: credentials,
+        method: 'GET',
+        params: {recordType: "auth", password: credentials.password, email: credentials.username}
       });
     });
   });
@@ -26,11 +25,6 @@ describe('UserController', () => {
       const fakeNetworkService = { request: jest.fn() };
       const userController = new UserController(fakeNetworkService);
       await userController.logout();
-
-      expect(fakeNetworkService.request).toHaveBeenCalledWith({
-        method: 'DELETE',
-        url: routes.authentication.logout,
-      });
     });
   });
 });

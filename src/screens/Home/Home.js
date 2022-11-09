@@ -90,7 +90,7 @@ export function Home() {
       </View>
       <View style={styles.headerText}>
         <Text style={[styles.pageHeader, typography.header, { color: colors.text }]}>
-          Hello, <Text style={[{ color: colors.secondary }]}> {user?.username}</Text>
+          Hello, <Text style={[{ color: colors.secondary }]}> {user?.name}</Text>
         </Text>
         <Text style={[styles.pageSubheader, typography.label, { color: colors.textLight }]}>
           To create a usage ticket, start by selecting a customer from the list below:

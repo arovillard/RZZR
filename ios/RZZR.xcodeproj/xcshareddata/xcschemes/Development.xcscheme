@@ -15,7 +15,7 @@
                   <BuildableReference
                      BuildableIdentifier = "primary"
                      BlueprintIdentifier = "720A9CBC25E5A9D40074D6D5"
-                     BuildableName = "RZZRDevelopment.app"
+                     BuildableName = "rzzrDevelopment.app"
                      BlueprintName = "Development"
                      ReferencedContainer = "container:rzzr.xcodeproj">
                   </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "720A9CBC25E5A9D40074D6D5"
-               BuildableName = "RZZRDevelopment.app"
+               BuildableName = "rzzrDevelopment.app"
                BlueprintName = "Development"
                ReferencedContainer = "container:rzzr.xcodeproj">
             </BuildableReference>
@@ -63,7 +63,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "720A9CBC25E5A9D40074D6D5"
-            BuildableName = "RZZRDevelopment.app"
+            BuildableName = "rzzrDevelopment.app"
             BlueprintName = "Development"
             ReferencedContainer = "container:rzzr.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "720A9CBC25E5A9D40074D6D5"
-            BuildableName = "RZZRDevelopment.app"
+            BuildableName = "rzzrDevelopment.app"
             BlueprintName = "Development"
             ReferencedContainer = "container:rzzr.xcodeproj">
          </BuildableReference>

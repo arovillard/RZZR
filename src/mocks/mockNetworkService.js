@@ -2,19 +2,17 @@ import { strings } from '@/localization';
 
 export const mockLoginNetworkService = {
   setAccessToken(_token) {},
-  request({ data }) {
-    if (data.password === 'invalidPassword') {
-      const error = strings.login.invalidCredentials;
-      throw { data: { error } };
+  request(req ) {
+    if (req.params.password === 'invalidPassword') {
+      return { data: {name: 'INVALID_CREDENTIAL'} };
     }
 
     const user = {
       id: 1,
-      accessToken: '8973272932932eT32e',
-      username: data.username,
+      name: req.params.email,
     };
 
-    return { data: { user } };
+    return { data: user };
   },
 };
 
