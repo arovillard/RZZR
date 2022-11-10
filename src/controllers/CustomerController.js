@@ -3,7 +3,7 @@ export class CustomerController {
     this.networkService = networkService;
   }
 
-  getCustomers(agentId) {
+  fetchCustomers(agentId) {
     return this.networkService.request({
       method: 'GET',
       params: {

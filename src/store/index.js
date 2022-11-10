@@ -14,7 +14,7 @@ export const initialStore = {
   error: {},
   status: {},
   user: {},
-  ticket: { tickets: [] },
+  ticket: { tickets: [], customerTickets: {} },
   customer: { cutomers: [] },
 };
 

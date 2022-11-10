@@ -6,8 +6,8 @@ import { getTicket } from '@/selectors/TicketSelectors';
 import { styles } from '@/screens/ViewTicket/ViewTicket.styles';
 
 export function ViewTicket({ route }) {
-  const { ticketId } = route.params;
-  const ticket = useSelector(getTicket(ticketId));
+  const { ticketId, customerId } = route.params;
+  const ticket = useSelector(getTicket(ticketId, customerId));
   const { colors } = useTheme();
 
   const viewTicketStyles = StyleSheet.create({

@@ -4,7 +4,7 @@ import { useTheme, useNavigation, useIsFocused } from '@react-navigation/native'
 import { Text, View, Image } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import { getUser } from '@/selectors/UserSelectors';
-import { getCustomers as getCustomerSelector } from '@/selectors/CustomerSelectors';
+import { getCustomers as getCustomersSelector } from '@/selectors/CustomerSelectors';
 import { styles } from '@/screens/Home/Home.styles';
 import { typography } from '@/theme';
 import { SearchableList, CustomerItem } from '@/components';
@@ -16,7 +16,7 @@ export function Home() {
   const user = useSelector(getUser);
   const isFocused = useIsFocused();
   const navigation = useNavigation();
-  const customers = useSelector(getCustomerSelector);
+  const customers = useSelector(getCustomersSelector);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -53,7 +53,12 @@ export function Home() {
           {customers && customers.length > 0 && (
             <SearchableList
               dataList={customers}
-              pressHandler={() => navigation.navigate('CustomerNavigator', { screen: 'Customer' })}
+              pressHandler={(item) =>
+                navigation.navigate('CustomerNavigator', {
+                  screen: 'Customer',
+                  params: { customerId: item.id },
+                })
+              }
               itemComponent={CustomerItem}
               searchIdentifier="name"
             />

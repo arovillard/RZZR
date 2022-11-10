@@ -81,7 +81,7 @@ export function SearchableList({ pressHandler, itemComponent, dataList, searchId
         style={{ backgroundColor: 'white' }}
         data={data}
         renderItem={({ item }) => (
-          <TouchableOpacity accessibilityRole="button" onPress={pressHandler}>
+          <TouchableOpacity accessibilityRole="button" onPress={() => pressHandler(item)}>
             <ListItem style={{ paddingVertical: 5 }}>
               <ListItem.Content>
                 <ItemComponent item={item} />

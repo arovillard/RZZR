@@ -11,6 +11,17 @@ export class TicketController {
   constructor(networkService) {
     this.networkService = networkService;
   }
+  fetchTickets(agentId, customerId) {
+    return this.networkService.request({
+      method: 'GET',
+      params: {
+        recordType: 'ticketList',
+        agent: agentId,
+        customerId,
+      },
+      body: {},
+    });
+  }
 
   submitTicket(ticket, demoMode) {
     if (demoMode) {

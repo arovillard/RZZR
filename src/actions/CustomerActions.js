@@ -30,7 +30,7 @@ export const getCustomers =
     try {
       dispatch(getCustomersRequest());
       const customerController = new CustomerController(networkService);
-      const { data } = await customerController.getCustomers(agentId);
+      const { data } = await customerController.fetchCustomers(agentId);
       dispatch(getCustomerSuccess(data.data.customers));
     } catch (data) {
       dispatch(getCustomerError(data?.message ?? strings.login.somethingIsWrong));

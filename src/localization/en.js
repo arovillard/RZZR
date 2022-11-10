@@ -50,6 +50,7 @@ export const en = {
     ticketStatusPending:
       'You are currently not connected to the internet. Once you regain access to your network you will have to manually submit this usage ticket.',
     ticketStatusFaliure: 'Submission failed. Please try submitting the ticket again.',
+    ticketFetchFailure: 'There was an issue fetching for tickets',
   },
   customer: {
     customers: 'Customers',
