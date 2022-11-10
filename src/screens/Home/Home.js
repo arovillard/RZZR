@@ -1,77 +1,29 @@
 /* eslint-disable react-native/no-inline-styles */
-import React from 'react';
-import { useTheme, useNavigation } from '@react-navigation/native';
+import React, { useEffect } from 'react';
+import { useTheme, useNavigation, useIsFocused } from '@react-navigation/native';
 import { Text, View, Image } from 'react-native';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { getUser } from '@/selectors/UserSelectors';
+import { getCustomers as getCustomerSelector } from '@/selectors/CustomerSelectors';
 import { styles } from '@/screens/Home/Home.styles';
 import { typography } from '@/theme';
 import { SearchableList, CustomerItem } from '@/components';
+import { getCustomers } from '@/actions/CustomerActions';
 import { logo } from '@/assets';
-
-const customerData = [
-  {
-    id: 10070,
-    name: 'Razor Test Customer 1',
-    is_person: false,
-    email: 'foo@bar.com',
-    phone: '1233211233',
-    is_active: true,
-  },
-  {
-    id: 10071,
-    name: 'Razor Test Customer 2',
-    is_person: false,
-    email: 'foo@bar.com',
-    phone: '1233211233',
-    is_active: true,
-  },
-  {
-    id: 10072,
-    name: 'Razor Test Customer 3',
-    is_person: false,
-    email: 'foo@bar.com',
-    phone: '1233211233',
-    is_active: true,
-  },
-  {
-    id: 10073,
-    name: 'Razor Test Customer 4',
-    is_person: false,
-    email: 'foo@bar.com',
-    phone: '1233211233',
-    is_active: true,
-  },
-  {
-    id: 10074,
-    name: 'Razor Test Customer 5',
-    is_person: false,
-    email: 'foo@bar.com',
-    phone: '1233211233',
-    is_active: true,
-  },
-  {
-    id: 10075,
-    name: 'Razor Test Customer 6',
-    is_person: false,
-    email: 'foo@bar.com',
-    phone: '1233211233',
-    is_active: true,
-  },
-  {
-    id: 10076,
-    name: 'Razor Test Customer 7',
-    is_person: false,
-    email: 'foo@bar.com',
-    phone: '1233211233',
-    is_active: true,
-  },
-];
 
 export function Home() {
   const { colors } = useTheme();
   const user = useSelector(getUser);
+  const isFocused = useIsFocused();
   const navigation = useNavigation();
+  const customers = useSelector(getCustomerSelector);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (isFocused) {
+      dispatch(getCustomers(user.id));
+    }
+  }, [dispatch, user.id, isFocused]);
 
   return (
     <View style={[styles.container, { backgroundColor: colors.lightGrey }]}>
@@ -98,12 +50,14 @@ export function Home() {
       </View>
       <View style={[styles.subContainer]}>
         <View style={[{ paddingHorizontal: 6 }]}>
-          <SearchableList
-            dataList={customerData}
-            pressHandler={() => navigation.navigate('CustomerNavigator', { screen: 'Customer' })}
-            itemComponent={CustomerItem}
-            searchIdentifier="name"
-          />
+          {customers && customers.length > 0 && (
+            <SearchableList
+              dataList={customers}
+              pressHandler={() => navigation.navigate('CustomerNavigator', { screen: 'Customer' })}
+              itemComponent={CustomerItem}
+              searchIdentifier="name"
+            />
+          )}
         </View>
       </View>
     </View>

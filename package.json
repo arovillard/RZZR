@@ -70,6 +70,7 @@
     "@testing-library/jest-native": "^4.0.4",
     "@testing-library/react-native": "^9.0.0",
     "@types/jest": "^27.4.0",
+    "babel-eslint": "^10.1.0",
     "babel-jest": "^27.5.1",
     "babel-plugin-module-resolver": "^4.1.0",
     "babel-plugin-transform-remove-console": "^6.9.4",

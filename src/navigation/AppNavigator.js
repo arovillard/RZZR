@@ -1,16 +1,18 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { useTheme } from '@react-navigation/native';
+import { useSelector } from 'react-redux';
 import React from 'react';
 import { TabBarIcon } from '@/components';
 import { NAVIGATION } from '@/constants';
 import { HomeNavigator } from '@/navigation/HomeNavigator';
 import { ProfileNavigator } from '@/navigation/ProfileNavigator';
+import { appState } from '@/selectors/StatusSelectors';
 
 const Tab = createBottomTabNavigator();
 
 export function AppNavigator() {
   const { colors } = useTheme();
-
+  console.log(useSelector(appState));
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({

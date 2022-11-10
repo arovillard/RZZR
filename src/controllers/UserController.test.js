@@ -1,4 +1,3 @@
-import { routes } from '@/controllers/routes';
 import { UserController } from '@/controllers/UserController';
 
 describe('UserController', () => {
@@ -11,11 +10,11 @@ describe('UserController', () => {
 
       const fakeNetworkService = { request: jest.fn() };
       const userController = new UserController(fakeNetworkService);
-      await userController.login(credentials);
+      await userController.login(credentials.email, credentials.password);
 
       expect(fakeNetworkService.request).toHaveBeenCalledWith({
         method: 'GET',
-        params: {recordType: "auth", password: credentials.password, email: credentials.username}
+        params: { recordType: 'auth', password: credentials.password, email: credentials.email },
       });
     });
   });

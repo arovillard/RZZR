@@ -1,10 +1,8 @@
-import { strings } from '@/localization';
-
 export const mockLoginNetworkService = {
   setAccessToken(_token) {},
-  request(req ) {
+  request(req) {
     if (req.params.password === 'invalidPassword') {
-      return { data: {name: 'INVALID_CREDENTIAL'} };
+      return { data: { name: 'INVALID_CREDENTIAL' } };
     }
 
     const user = {

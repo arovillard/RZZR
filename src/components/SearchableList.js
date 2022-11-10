@@ -90,7 +90,7 @@ export function SearchableList({ pressHandler, itemComponent, dataList, searchId
             </ListItem>
           </TouchableOpacity>
         )}
-        keyExtractor={(item) => item.email}
+        keyExtractor={(item) => item.id}
         ItemSeparatorComponent={renderSeparator}
         ListHeaderComponent={getHeader()}
       />

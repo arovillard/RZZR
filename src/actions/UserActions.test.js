@@ -1,6 +1,7 @@
 import configureStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import { login, logout, TYPES } from '@/actions/UserActions';
+import { TYPES as GLOBAL_TYPES } from '@/actions/GlobalActions';
 import { strings } from '@/localization';
 import { mockLoginNetworkService, mockLogoutNetworkService } from '@/mocks';
 
@@ -17,8 +18,8 @@ describe('UserActions', () => {
           payload: {
             user: {
               id: 1,
-              name: 'username' 
-            }
+              name: 'username',
+            },
           },
         },
       ];
@@ -62,7 +63,7 @@ describe('UserActions', () => {
     it('should always dispatch a CLEAR_STORE action', async () => {
       const logoutSuccessActions = [
         {
-          type: TYPES.CLEAR_STORE,
+          type: GLOBAL_TYPES.GLOBAL_RESET,
           payload: null,
         },
       ];

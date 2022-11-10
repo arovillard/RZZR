@@ -1,4 +1,5 @@
 import { UserController } from '@/controllers';
+import { globalReset } from '@/actions/GlobalActions';
 import { strings } from '@/localization';
 
 export const TYPES = {
@@ -29,34 +30,34 @@ const clearStore = () => ({
   payload: null,
 });
 
-export const login = (username, password) => async (
-  dispatch,
-  _,
-  { networkService }
-) => {
-  try {
-    dispatch(loginRequest());
-    const userController = new UserController(networkService);
-    const { data } = await userController.login({ username, password });
-    if (
-      data.name === userController.USER_MESSAGES.invalidCredential ||
-      data.name === userController.USER_MESSAGES.missingParameter
-    ) {
-      dispatch(loginError(data?.error ?? strings.login.invalidCredentials));
-    } else {
-      dispatch(loginSuccess(data));
+export const login =
+  (username, password) =>
+  async (dispatch, _, { networkService }) => {
+    try {
+      dispatch(loginRequest());
+      const userController = new UserController(networkService);
+      const { data } = await userController.login(username, password);
+      if (
+        data.name === userController.USER_MESSAGES.invalidCredential ||
+        data.name === userController.USER_MESSAGES.missingParameter
+      ) {
+        dispatch(loginError(data?.error ?? strings.login.invalidCredentials));
+      } else {
+        dispatch(loginSuccess(data));
+      }
+    } catch (data) {
+      dispatch(loginError(data?.message ?? strings.login.somethingIsWrong));
     }
-  } catch (data) {
-    dispatch(loginError(data?.message ?? strings.login.somethingIsWrong));
-  }
-};
+  };
 
-export const logout = () => async (dispatch, _, { demoMode, networkService }) => {
-  try {
-    const userController = new UserController(networkService);
-    await userController.logout({ demoMode });
-  } finally {
-    // networkService.clearAccessToken();
-    dispatch(clearStore());
-  }
-};
+export const logout =
+  () =>
+  async (dispatch, _, { demoMode, networkService }) => {
+    try {
+      const userController = new UserController(networkService);
+      await userController.logout({ demoMode });
+    } finally {
+      // networkService.clearAccessToken();
+      dispatch(globalReset());
+    }
+  };

@@ -24,13 +24,15 @@ const createTicketError = (error) => ({
   payload: { error },
 });
 
-export const createTicket = (ticket) => async (dispatch, _, { demoMode, networkService }) => {
-  try {
-    dispatch(createTicketRequest());
-    const ticketController = new TicketController(networkService);
-    const { data } = await ticketController.submitTicket(ticket, demoMode);
-    dispatch(createTicketSuccess(data.ticket));
-  } catch ({ data }) {
-    dispatch(createTicketError(data?.error ?? strings.ticket.apiError));
-  }
-};
+export const createTicket =
+  (ticket) =>
+  async (dispatch, _, { demoMode = true, networkService }) => {
+    try {
+      dispatch(createTicketRequest());
+      const ticketController = new TicketController(networkService);
+      const { data } = await ticketController.submitTicket(ticket, demoMode);
+      dispatch(createTicketSuccess(data.ticket));
+    } catch ({ data }) {
+      dispatch(createTicketError(data?.error ?? strings.ticket.apiError));
+    }
+  };

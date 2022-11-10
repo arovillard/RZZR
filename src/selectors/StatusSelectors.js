@@ -2,6 +2,8 @@ import { STATUS } from '@/constants';
 
 const { ERROR, LOADING, NOT_STARTED, SUCCESS } = STATUS;
 
+export const appState = (state) => state;
+
 export const statusSelector = (action, state) => {
   return state.status[action];
 };

@@ -1,5 +1,3 @@
-import { routes } from '@/controllers/routes';
-import { strings } from '@/localization';
 export class UserController {
   constructor(networkService) {
     this.networkService = networkService;
@@ -10,7 +8,7 @@ export class UserController {
     missingParameter: 'MISSING_PARAMETER',
   };
 
-  login({ username, password, demoMode }) {
+  login(username, password) {
     return this.networkService.request({
       method: 'GET',
       params: {

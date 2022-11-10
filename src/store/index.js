@@ -1,4 +1,4 @@
-import { applyMiddleware, createStore } from 'redux';
+import { applyMiddleware, legacy_createStore as createStore } from 'redux';
 import { persistReducer, persistStore } from 'redux-persist';
 import thunk from 'redux-thunk';
 import { networkService } from '@/networking';
@@ -10,9 +10,16 @@ const persistConfig = {
   storage: storage,
   blacklist: ['error', 'status'],
 };
+export const initialStore = {
+  error: {},
+  status: {},
+  user: {},
+  ticket: { tickets: [] },
+  customer: { cutomers: [] },
+};
 
 export const store = createStore(
-  persistReducer(persistConfig, rootReducer),
+  persistReducer(persistConfig, rootReducer, initialStore),
   applyMiddleware(thunk.withExtraArgument({ networkService, demoMode: true }))
 );
 

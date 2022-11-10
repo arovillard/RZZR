@@ -30,7 +30,8 @@ export class NetworkService {
     return oauth.toHeader(oauth.authorize(request_data, token));
   };
 
-  paramToString = (paramObj) => Object.keys(paramObj)
+  paramToString = (paramObj) =>
+    Object.keys(paramObj)
       .map((key) => `${key}=${paramObj[key]}`)
       .join('&');
 

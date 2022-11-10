@@ -96,9 +96,9 @@ export function NewTicket() {
       images.forEach((item) => {
         photosArray.push(item.assets[0].uri);
       });
-      setValue("photos", [...photosArray]);
+      setValue('photos', [...photosArray]);
     }
-  }, [images]);
+  }, [images, setValue]);
 
   //Launch Camera
   const cameraLaunch = () => {

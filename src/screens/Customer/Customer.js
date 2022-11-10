@@ -26,6 +26,7 @@ export function Customer() {
           tickets.length > 0 &&
           tickets.map((ticket) => (
             <Button
+              key={ticket.id}
               onPress={() =>
                 navigation.navigate('CustomerNavigator', {
                   screen: 'ViewTicket',

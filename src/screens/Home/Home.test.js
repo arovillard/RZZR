@@ -1,6 +1,5 @@
 import { render } from '@testing-library/react-native';
 import React from 'react';
-import { strings } from '@/localization';
 import { Home } from '@/screens/Home/Home';
 import { withProviders } from '@/test-utils';
 
@@ -9,6 +8,26 @@ const fakeStore = {
   status: {},
   user: {
     name: 'johndoe',
+  },
+  customer: {
+    customers: [
+      {
+        email: 'example@test02.com',
+        id: 10076,
+        is_active: true,
+        is_person: false,
+        name: 'RM test 02',
+        phone: '2222222',
+      },
+      {
+        email: 'example@test01.com',
+        id: 10075,
+        is_active: true,
+        is_person: false,
+        name: 'RM test 01',
+        phone: '1231231',
+      },
+    ],
   },
 };
 

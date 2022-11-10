@@ -69,11 +69,15 @@ export function Login() {
             value={password}
           />
           <ErrorView errors={errors} />
-          {isLoading ? <ActivityIndicator /> : <Button
-            onPress={handleSubmit}
-            style={styles.submitButton}
-            title={isLoading ? strings.common.loading : strings.login.button}
-          />}
+          {isLoading ? (
+            <ActivityIndicator style={{ marginTop: spacing.l }} />
+          ) : (
+            <Button
+              onPress={handleSubmit}
+              style={styles.submitButton}
+              title={isLoading ? strings.common.loading : strings.login.button}
+            />
+          )}
         </View>
       </View>
       <View style={loginStyles.footer}>
