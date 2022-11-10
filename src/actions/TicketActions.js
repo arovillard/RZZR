@@ -63,7 +63,7 @@ export const getTickets =
       dispatch(getTicketsRequest());
       const ticketController = new TicketController(networkService);
       const { data } = await ticketController.fetchTickets(agentId, customerId);
-      dispatch(getTicketsSuccess({ [customerId]: { ...data.data.Tickets } }));
+      dispatch(getTicketsSuccess({ [customerId]: { ...data.data.tickets } }));
     } catch ({ data }) {
       dispatch(getTicketsError(data?.error ?? strings.ticket.ticketFetchFailure));
     }
